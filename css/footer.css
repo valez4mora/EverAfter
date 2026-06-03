@@ -1,0 +1,13 @@
+/* footer */
+
+footer {
+    background-color: #fafafa;
+    color: rgb(77, 77, 77);
+    text-align: center;
+    padding: 2rem;
+}
+
+footer h2 {
+    margin-bottom: 1rem;
+}
+

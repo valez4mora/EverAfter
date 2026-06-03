@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+}
+/*body*/
+body {
+    background-color: #e9e1e1;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+/* carrusel de fotos */
+
+.carrusel {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slide.activo {
+    opacity: 1;
+}
+
+/* hero */
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.hero h2 {
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+/* ejemplos */
+
+#ejemplos {
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#ejemplos h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+#ejemplos article {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+#ejemplos img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+#ejemplos h3 {
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 700px) {
+    #ejemplos {
+        grid-template-columns: 1fr;
+    }
+}
+
