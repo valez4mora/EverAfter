@@ -1,24 +1,29 @@
-const slides = document.querySelectorAll(".slide");
+//color header
+const header = document.querySelector("header");
+const hero = document.querySelector(".hero");
 
-let indice = 0;
+window.addEventListener("scroll", () => {
+    const heroTop = hero.offsetTop;
 
-function cambiarSlide() {
-
-    slides[indice].classList.remove("activo");
-
-    indice++;
-
-    if (indice >= slides.length) {
-        indice = 0;
+    if (window.scrollY >= heroTop) {
+        header.classList.add("hero-color");
+    } else {
+        header.classList.remove("hero-color");
     }
+});
+//logo
+const logos = document.querySelectorAll(".logo");
+const home = document.querySelector(".home");
 
-    slides[indice].classList.add("activo");
-}
-
-setInterval(cambiarSlide, 5000);
-
-
+logos.forEach(logo => {
+    logo.addEventListener("click", () => {
+        home.scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
 //boton Nav
+
 const btnNav = document.getElementById("btnNav");
 const menu = document.getElementById("navMenu");
 
@@ -27,4 +32,3 @@ btnNav.addEventListener("click", () => {
     menu.classList.toggle("activo");
 
 });
-//

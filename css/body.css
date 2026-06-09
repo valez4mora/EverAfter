@@ -1,91 +1,207 @@
-* {
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Cormorant+Garamond:wght@300;400&display=swap');
+
+* { /*propiedades generales*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     overscroll-behavior: none;
 }
+
 /*body*/
 body {
-    background-color: #e9e1e1;
-    color: #000000;
+    background: #250902;
+    color: #F5EFE6;
     overflow-x: hidden;
+    
 }
 
-/* carrusel de fotos */
+/* inicio */
 
-.carrusel {
+.home { /*Seccion home*/
     position: relative;
+    width: 100%;
     height: 500px;
     overflow: hidden;
+    height: 100vh;
 }
 
-.slide {
+.home img {/*Imagen principal*/
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s;
 }
 
-.slide.activo {
-    opacity: 1;
+.texto { /*Texto sobre la imagen*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #F5EFE6;
+    font-size:  2.8rem;
+    text-align: center;
+    width: 80%;
 }
+
 
 /* hero */
-
-.hero {
+.hero {/*seccion hero*/
     text-align: center;
-    padding: 4rem 2rem;
-    background-color: white;
+    border-top: 1px solid #F5EFE6;
+    border-bottom: 1px solid#F5EFE6;
+    color: #F5EFE6;
+    font-style: italic;
+    
 }
 
-.hero h2 {
-    color: #000000;
-    margin-bottom: 1rem;
+.hero h1 { /*titulo*/
+    font-family: 'Playfair Display', serif;
+    padding-top: 5%;
+    font-size: 30px;
+    font-size:  2.8rem;
 }
 
-/* ejemplos */
-
-#ejemplos {
-    padding: 4rem 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-#ejemplos h2 {
-    grid-column: 1 / -1;
+.hero h2 { /*segundo titulo*/
+    padding-top: 3%;
+    font-size: 0.85rem;
+    font-weight: normal;
     text-align: center;
-}
-
-#ejemplos article {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 15px;
+    font-family: 'Playfair Display', serif;
 }
 
-#ejemplos img {
+.hero-grid {/*columnas del hero*/
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 1rem;
+    padding: 5% 2rem 10rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    background: #250902;
     width: 100%;
-    display: block;
-    border-radius: 10px;
+    box-sizing: border-box;
 }
 
-#ejemplos h3 {
-    text-align: center;
-    padding: 1rem;
+.hero-col-left { /*Columna izquierda*/
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-end;
+    height: 100%;
+    min-width: 0; 
 }
 
+.hero-col-center {/*columna central*/
+    grid-column: 2;
+    min-width: 0; 
+}
+
+.hero-col-right { /*columna derecha*/
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0; 
+}
+
+.hero img { /*imagenes del hero*/
+    width: 100%;
+    object-fit: cover;
+    display: block; 
+}
+
+.hero-col-left img { /*dimensiones imagen izquierda*/
+    height: 352px;
+    width: 100%;
+}
+
+.hero-col-center img { /*dimensiones imagen central*/
+    height: 426px;
+    width: 100%;
+}
+
+.hero-col-right img { /*dimensiones imagen derecha*/
+    height: 352px;
+    width: 100%;
+}
+
+.hero p { /*parrafos del hero*/
+    font-size: 0.72rem;
+    line-height: 1.7;
+    text-align: justify;
+    margin: 0;
+    font-family: inherit;
+}
+
+.hero h3 { /*Boton organizar boda*/
+    font-size: 0.95rem;
+    grid-column: 3;
+    padding-top: 2%;
+    text-align: right;
+    font-weight: normal;
+}
+.hero h3 a { /*eliminar decoracion h3*/
+  color: inherit;        
+  text-decoration: none; 
+}
+
+/*Media query*/
 @media (max-width: 700px) {
-    #ejemplos {
+
+    html {
+        overscroll-behavior: auto;
+    }
+    .home img{
+        width: 100%;
+        height: 100%;
+    }
+    .hero-grid {
         grid-template-columns: 1fr;
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+    .hero-col-left {
+        padding-top: 10%;
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .hero-col-center {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .hero-col-right {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    
+
+    .hero h3 {
+        grid-column: 1;
+        grid-row: auto;
+        text-align: right;
+    }
+
+    .hero-col-left img,
+    .hero-col-center img,
+    .hero-col-right img {
+        height: 400px;
+        width: 100%;
     }
 }
-
+  
