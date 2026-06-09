@@ -1,7 +1,7 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Cormorant+Garamond:wght@300;400&display=swap');
 
-* { /*propiedades generales*/
+* {
+    /*propiedades generales*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,12 +18,13 @@ body {
     background: #250902;
     color: #F5EFE6;
     overflow-x: hidden;
-    
+
 }
 
 /* inicio */
 
-.home { /*Seccion home*/
+.home {
+    /*Seccion home*/
     position: relative;
     width: 100%;
     height: 500px;
@@ -31,14 +32,16 @@ body {
     height: 100vh;
 }
 
-.home img {/*Imagen principal*/
+.home img {
+    /*Imagen principal*/
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.texto { /*Texto sobre la imagen*/
+.texto {
+    /*Texto sobre la imagen*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,30 +50,33 @@ body {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     color: #F5EFE6;
-    font-size:  2.8rem;
+    font-size: 2.8rem;
     text-align: center;
     width: 80%;
 }
 
 
 /* hero */
-.hero {/*seccion hero*/
+.hero {
+    /*seccion hero*/
     text-align: center;
     border-top: 1px solid #F5EFE6;
     border-bottom: 1px solid#F5EFE6;
     color: #F5EFE6;
     font-style: italic;
-    
+
 }
 
-.hero h1 { /*titulo*/
+.hero h1 {
+    /*titulo*/
     font-family: 'Playfair Display', serif;
     padding-top: 5%;
     font-size: 30px;
-    font-size:  2.8rem;
+    font-size: 2.8rem;
 }
 
-.hero h2 { /*segundo titulo*/
+.hero h2 {
+    /*segundo titulo*/
     padding-top: 3%;
     font-size: 0.85rem;
     font-weight: normal;
@@ -80,7 +86,8 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-.hero-grid {/*columnas del hero*/
+.hero-grid {
+    /*columnas del hero*/
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
     gap: 1rem;
@@ -93,51 +100,59 @@ body {
     box-sizing: border-box;
 }
 
-.hero-col-left { /*Columna izquierda*/
+.hero-col-left {
+    /*Columna izquierda*/
     grid-column: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     justify-content: flex-end;
     height: 100%;
-    min-width: 0; 
+    min-width: 0;
 }
 
-.hero-col-center {/*columna central*/
+.hero-col-center {
+    /*columna central*/
     grid-column: 2;
-    min-width: 0; 
+    min-width: 0;
 }
 
-.hero-col-right { /*columna derecha*/
+.hero-col-right {
+    /*columna derecha*/
     grid-column: 3;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    min-width: 0; 
+    min-width: 0;
 }
 
-.hero img { /*imagenes del hero*/
+.hero img {
+    /*imagenes del hero*/
     width: 100%;
     object-fit: cover;
-    display: block; 
+    display: block;
 }
 
-.hero-col-left img { /*dimensiones imagen izquierda*/
+.hero-col-left img {
+    /*dimensiones imagen izquierda*/
     height: 352px;
     width: 100%;
 }
 
-.hero-col-center img { /*dimensiones imagen central*/
+.hero-col-center img {
+    /*dimensiones imagen central*/
     height: 426px;
     width: 100%;
 }
 
-.hero-col-right img { /*dimensiones imagen derecha*/
+.hero-col-right img {
+    /*dimensiones imagen derecha*/
     height: 352px;
     width: 100%;
 }
 
-.hero p { /*parrafos del hero*/
+.hero p {
+    /*parrafos del hero*/
     font-size: 0.72rem;
     line-height: 1.7;
     text-align: justify;
@@ -145,16 +160,19 @@ body {
     font-family: inherit;
 }
 
-.hero h3 { /*Boton organizar boda*/
+.hero h3 {
+    /*Boton organizar boda*/
     font-size: 0.95rem;
     grid-column: 3;
     padding-top: 2%;
     text-align: right;
     font-weight: normal;
 }
-.hero h3 a { /*eliminar decoracion h3*/
-  color: inherit;        
-  text-decoration: none; 
+
+.hero h3 a {
+    /*eliminar decoracion h3*/
+    color: inherit;
+    text-decoration: none;
 }
 
 /*Media query*/
@@ -163,10 +181,12 @@ body {
     html {
         overscroll-behavior: auto;
     }
-    .home img{
+
+    .home img {
         width: 100%;
         height: 100%;
     }
+
     .hero-grid {
         grid-template-columns: 1fr;
         padding: 1rem;
@@ -189,7 +209,7 @@ body {
         grid-row: auto;
     }
 
-    
+
 
     .hero h3 {
         grid-column: 1;
@@ -204,4 +224,3 @@ body {
         width: 100%;
     }
 }
-  

@@ -166,6 +166,7 @@ footer h2 {
     nav a {
         width: 100%;
     }
+
     #ejemplos {
         grid-template-columns: 1fr;
     }
