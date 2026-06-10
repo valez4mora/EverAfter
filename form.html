@@ -12,31 +12,31 @@
 
     <section class="mosaic-section">
 
-        <div class="mosaic-left">
-            <div>
+        <aside class="mosaic-left">
+            <header>
                 <h1><em>Ways We Can</em><br>Work Together</h1>
-            </div>
+            </header>
 
-            <div class="form-section">
+            <article class="form-section">
                 <p>Enter your wedding details and we'll show you the available options.</p>
                 <form action="submit_form.php" method="post">
 
-                    <label for="date">Wedding date:</label>
+                    <label for="name1">Partner Name</label>
+                    <input type="text" id="name1" name="name1" required>
+
+                    <label for="name2">& Partner Name</label>
+                    <input type="text" id="name2" name="name2" required>
+
+                    <label for="date">Wedding date</label>
                     <input type="date" id="date" name="date" required>
-
-                    <label for="recepcion">Reception venue:</label>
-                    <input type="text" id="recepcion" name="recepcion" required>
-
-                    <label for="ceremonia">Ceremony venue:</label>
-                    <input type="text" id="ceremonia" name="ceremonia" required>
 
                     <input type="submit" value="Submit">
 
                 </form>
-            </div>
-        </div>
+            </article>
+        </aside>
 
-        <div class="mosaic-right">
+        <figure class="mosaic-right">
             <div class="photo p1"><img src="resources/images/foto1.jpg" alt="Wedding 1"></div>
             <div class="photo p2"><img src="resources/images/foto2.jpg" alt="Wedding 2"></div>
             <div class="photo p3"><img src="resources/images/foto3.jpg" alt="Wedding 3"></div>
@@ -47,7 +47,7 @@
             <div class="photo p8"><img src="resources/images/foto8.jpg" alt="Wedding 8"></div>
             <div class="photo p9"><img src="resources/images/foto9.jpg" alt="Wedding 9"></div>
             <div class="photo p10"><img src="resources/images/foto10.jpg" alt="Wedding 10"></div>
-        </div>
+        </figure>
 
     </section>
 
