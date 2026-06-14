@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Jost:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+body {
+  background: #250902;
+  color: #F5EFE6;
+  font-family: inherit;
+  font-weight: 300;
+  padding: auto;
+  padding-top: 6rem;
+}
+
+/* Busqueda */
+.search-wrap {
+  max-width: 680px;
+  margin: 0 auto 2rem;
+}
+
+.search-box {
+  display: flex;
+  border: 1px solid #F5EFE6;
+  background: #2a1208;
+}
+
+.search-box input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1rem;
+  color: #f5efe6;
+  font-size: 0.85rem;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  border-left: 1px solid #F5EFE6;
+  color: #F5EFE6;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+/* Categorias */
+
+
+.categories{
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.category {
+  background: #2a1208;
+  border: 1px solid transparent;
+}
+
+
+
+.category.open {
+  border-color: #F5EFE6;
+}
+
+.category section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+}
+
+.category ul {
+  display: none;
+  list-style: none;
+}
+
+.category.open ul {
+  display: block;
+}
+
+.category li {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: #F5EFE6;
+}
+
+.category li label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.category li input {
+  width: 80px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #550902;
+  color: #F5EFE6;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 0.1rem 0.3rem;
+  text-align: right;
+  outline: none;
+}
+hr{
+  border: 1px solid#F5EFE6;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+/* Total */
+.total-bar {
+  width: 100%;
+  margin: 1.5rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border: 1px solid #F5EFE6;
+  background: #250902;
+}
+
+.total-bar p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.65rem;
+}
+
+#noResults {
+  display: none;
+}

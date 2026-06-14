@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presupuesto</title>
+
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/budget.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+  <header id="main-header">
+    <button id="btnNav">
+      <img src="resources/menu.png" alt="Menu">
+    </button>
+    <h1 class="titulo logo"> EverAfter </h1>
+
+    <nav id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="">About</a></li>
+        <h1 class="logo">EverAfter</h1>
+        <li><a href="#main-footer">Contact</a></li>
+        <li><a href="form.html">Let's Start</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="search-wrap">
+    <p>Buscar</p>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Ej: fotógrafo, flores...">
+      <button onclick="clearSearch()">✕</button>
+    </div>
+  </section>
+
+  <main>
+    
+    <section class="categories">
+      <article class="category" data-cat="Entretenimiento">
+        <section onclick="toggle(this)">
+          <p>Entretenimiento</p>
+          <p>&#9661;</p>
+        </section>
+        <ul></ul>
+      </article>
+
+      <article class="category" data-cat="Belleza y salud">
+        <section onclick="toggle(this)">
+          <p>Belleza y salud</p>
+          <p>&#9661;</p>
+        </section>
+        <ul></ul>
+      </article>
+
+      <article class="category" data-cat="Pastelería">
+        <section onclick="toggle(this)">
+          <p>Pastelería</p>
+          <p>&#9661;</p>
+        </section>
+        <ul></ul>
+      </article>
+
+      <article class="category" data-cat="Catering">
+        <section onclick="toggle(this)">
+          <p>Catering</p>
+          <p>&#9661;</p>
+        </section>
+        <ul></ul>
+      </article>
+
+      <article class="category" data-cat="Música">
+        <section onclick="toggle(this)">
+          <p>Música</p>
+          <p>&#9661;</p>
+        </section>
+        <ul></ul>
+      </article>
+
+      <article class="category" data-cat="Vestimenta">
+        <section onclick="toggle(this)">
+          <p>Vestimenta</p>
+          <p>&#9661;</p>
+        </section>
+        <ul></ul>
+      </article>
+
+      <article class="category" data-cat="Flores">
+        <section onclick="toggle(this)">
+          <p>Flores</p>
+          <p>&#9661;</p>
+        </section>
+        <ul></ul>
+      </article>
+
+      <article class="category" data-cat="Fotografía">
+        <section onclick="toggle(this)">
+          <p>Fotografía</p>
+          <p>&#9661;</p>
+        </section>
+        <ul></ul>
+      </article>
+
+      <article class="category" data-cat="Transporte">
+        <section onclick="toggle(this)">
+          <p>Transporte</p>
+          <p>&#9661;</p>
+        </section>
+        <ul></ul>
+      </article>
+
+      <article class="category" data-cat="Espacio">
+        <section onclick="toggle(this)">
+          <p>Espacio</p>
+          <p>&#9661;</p>
+        </section>
+        <ul></ul>
+      </article>
+
+      <article class="category" data-cat="Otros">
+        <section onclick="toggle(this)">
+          <p>Otros</p>
+          <p>&#9661;</p>
+        </section>
+        <ul></ul>
+      </article>
+
+      <section class="total-bar">
+        <p>Estimado <span id="total-estimado">$0</span></p>
+        <p>Abonado <span id="total-abonado">$0</span></p>
+        <p>Real <span id="total-estimado">$0</span></p>
+        <p>pendiente <span id="total-pendiente">$0</span></p>
+      </section>
+    </section>
+    <hr>
+  </main>
+
+  <p id="noResults">No se encontraron resultados</p>
+
+
+  <footer id="main-footer">
+    <h2>EverAfter</h2>
+    <p>Where beautiful weddings begin with thoughtful planning</p>
+    <hr>
+    <section class="footer-info">
+      <p>&#9993; EverAfter@si.com</p>
+      <p>&#9742; +506 1234</p>
+    </section>
+    <p class="footer-copy">&copy; 2026 EverAfter. All rights reserved.</p>
+  </footer>
+
+  <script src="script/script.js"></script>
+</body>
+
+</html>
