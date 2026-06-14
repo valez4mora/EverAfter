@@ -1,16 +1,14 @@
 /* footer */
 
-
-footer {
+#main-footer {
     background: #250902;
     color: #F5EFE6;
     text-align: center;
     padding: 1rem 1rem;
-
+    
 }
 
-footer h2 {
-    /*Titulo del footer*/
+#main-footer h2 { /*Titulo del footer*/
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 2.5rem;
@@ -18,34 +16,30 @@ footer h2 {
     margin: 0 0 0.5rem;
 }
 
-footer p {
-    /*parrafo*/
+#main-footer p { /*parrafo*/
     font-size: 0.85rem;
     margin: 0 0 1.5rem;
 }
 
-footer hr {
-    /*Linea*/
+#main-footer hr { /*Linea*/
     border: none;
     border-top: 1px solid #F5EFE6;
     max-width: 300px;
     margin: 0 auto 1.5rem;
 }
 
-.footer-info {
-    /*Info de contacto*/
+#main-footer .footer-info { /*Info de contacto*/
     display: flex;
     justify-content: center;
     gap: 2rem;
     margin-bottom: 1.5rem;
 }
 
-.footer-info p {
+#main-footer .footer-info p {
     margin: 0;
 }
 
-.footer-copy {
-    /*Copyright*/
+#main-footer .footer-copy { /*Copyright*/
     font-size: 0.75rem;
     color: rgba(245, 239, 230, 0.4);
     margin: 0;
