@@ -1,70 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/menu.css">
     <title>EverAfter</title>
 </head>
+
 <body>
 
     <nav class="nav">
-        <div class="nav-logo">EverAfter</div>
-        <div class="nav-links">
+        <span class="nav-logo">EverAfter</span>
+        <section class="nav-links">
             <a href="menu.html">Home</a>
             <a href="budget.html">Budget</a>
             <a href="checklist.html">Checklist</a>
-        </div>
+        </section>
     </nav>
 
-    <div class="hero">
-        <div class="hero-left">
-            <div class="hero-tag">Welcome back</div>
-            <div class="hero-names" id="hero-names"></div>
-            <div class="hero-tagline">Everything you need to plan your perfect wedding, all in one place.</div>
-        </div>
-        <div class="hero-right">
-            <div class="countdown-label">Counting down to your big day</div>
-            <div class="countdown" id="countdown"></div>
-            <div class="c-date-line" id="c-date"></div>
-        </div>
-    </div>
+    <header class="hero">
+        <section class="hero-left">
+            <span class="hero-tag">Welcome back</span>
+            <h1 class="hero-names" id="hero-names"></h1>
+            <p class="hero-tagline">Everything you need to plan your perfect wedding, all in one place.</p>
+        </section>
+        <aside class="hero-right">
+            <p class="countdown-label">Counting down to your big day</p>
+            <section class="countdown" id="countdown"></section>
+            <time class="c-date-line" id="c-date"></time>
+        </aside>
+    </header>
 
-    <div class="personal">
+    <section class="personal">
         <div>
             <h4 id="p-greeting"></h4>
-            <p>Your wedding planning journey starts here. We've prepared everything to make this process as beautiful as your love story.</p>
+            <p>Your wedding planning journey starts here. We've prepared everything to make this process as beautiful as
+                your love story.</p>
         </div>
-        <div class="personal-icon">💍</div>
-    </div>
+        <span class="personal-icon">💍</span>
+    </section>
 
-    <div class="section-header">
+    <header class="section-header">
         <h3>What would you like to do?</h3>
         <span>Choose a service to get started</span>
-    </div>
+    </header>
 
-    <div class="services-grid">
-        <div class="s-card">
-            <div class="s-img">💰</div> // ocupo poner imágenes pero no tengo, así que emojis por ahora
-            <div class="s-body">
-                <div class="s-tag">Financial planning</div>
-                <div class="s-title">Budget Planner</div>
-                <div class="s-desc">Track every expense and keep your wedding within budget.</div>
+    <section class="services-grid">
+        <article class="s-card">
+            <figure class="s-img">
+                <img src="resources/images/budget.jpg" alt="Budget">
+            </figure>
+            <section class="s-body">
+                <span class="s-tag">Financial planning</span>
+                <h2 class="s-title">Budget Planner</h2>
+                <p class="s-desc">Track every expense and keep your wedding within budget.</p>
                 <a class="s-link" href="budget.html">Go to budget →</a>
-            </div>
-        </div>
-        <div class="s-card">
-            <div class="s-img">✅</div> // aquí también
-            <div class="s-body">
-                <div class="s-tag">Task management</div>
-                <div class="s-title">Wedding Checklist</div>
-                <div class="s-desc">Never miss a detail. Stay on top of every task.</div>
+            </section>
+        </article>
+        <article class="s-card">
+            <figure class="s-img">
+                <img src="resources/images/checklist.jpg" alt="Checklist">
+            </figure>
+            <section class="s-body">
+                <span class="s-tag">Task management</span>
+                <h2 class="s-title">Wedding Checklist</h2>
+                <p class="s-desc">Never miss a detail. Stay on top of every task.</p>
                 <a class="s-link" href="checklist.html">Go to checklist →</a>
-            </div>
-        </div>
-    </div>
+            </section>
+        </article>
+    </section>
 
-    <script> // no sé 
+    <script>
         const p1 = localStorage.getItem('ea_p1') || 'Partner 1';
         const p2 = localStorage.getItem('ea_p2') || 'Partner 2';
         const wdate = localStorage.getItem('ea_date') || '2027-01-01';
@@ -90,4 +97,5 @@
     </script>
 
 </body>
+
 </html>
