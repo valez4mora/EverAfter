@@ -396,9 +396,6 @@ function inicializarPaquetes() {
     configurarEventosBusqueda();
 }
 
-
-
-
 // eventos
 window.addEventListener("scroll", cambiarColorHeader);
 
