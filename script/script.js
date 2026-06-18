@@ -11,7 +11,7 @@ const menu = document.getElementById("navMenu");
 const paquetes = [
     {
         id: 1,
-        imagen: "resources/home.jpg",
+        imagen: "resources/images/Home.jpg",
         nombre: "Classic Romance",
         categoria: "Classic",
         precio: 2500,
@@ -22,7 +22,7 @@ const paquetes = [
     },
     {
         id: 2,
-        imagen: "resources/home.jpg",
+        imagen: "resources/images/Home.jpg",
         nombre: "Luxury Dream",
         categoria: "Premium",
         precio: 5000,
@@ -33,7 +33,7 @@ const paquetes = [
     },
     {
         id: 3,
-        imagen: "resources/home.jpg",
+        imagen: "resources/images/Home.jpg",
         nombre: "Garden Bliss",
         categoria: "Outdoor",
         precio: 3500,
@@ -44,7 +44,7 @@ const paquetes = [
     },
     {
         id: 4,
-        imagen: "resources/home.jpg",
+        imagen: "resources/images/Home.jpg",
         nombre: "Beach Escape",
         categoria: "Beach",
         precio: 4200,
@@ -55,7 +55,7 @@ const paquetes = [
     },
     {
         id: 5,
-        imagen: "resources/home.jpg",
+        imagen: "resources/images/Home.jpg",
         nombre: "Royal Elegance",
         categoria: "Premium",
         precio: 6500,
@@ -71,7 +71,7 @@ const paquetes = [
     },
     {
         id: 6,
-        imagen: "resources/home.jpg",
+        imagen: "resources/images/Home.jpg",
         nombre: "Sunset Paradise",
         categoria: "Beach",
         precio: 4800,
@@ -87,7 +87,7 @@ const paquetes = [
     },
     {
         id: 7,
-        imagen: "resources/home.jpg",
+        imagen: "resources/images/Home.jpg",
         nombre: "Forest Fairytale",
         categoria: "Outdoor",
         precio: 3900,
@@ -103,7 +103,7 @@ const paquetes = [
     },
     {
         id: 8,
-        imagen: "resources/home.jpg",
+        imagen: "resources/images/Home.jpg",
         nombre: "Golden Memories",
         categoria: "Classic",
         precio: 3100,
@@ -119,7 +119,7 @@ const paquetes = [
     },
     {
         id: 9,
-        imagen: "resources/home.jpg",
+        imagen: "resources/images/Home.jpg",
         nombre: "Diamond Celebration",
         categoria: "Premium",
         precio: 7200,
@@ -135,7 +135,7 @@ const paquetes = [
     },
     {
         id: 10,
-        imagen: "resources/home.jpg",
+        imagen: "resources/images/Home.jpg",
         nombre: "Ocean Breeze",
         categoria: "Beach",
         precio: 4500,
