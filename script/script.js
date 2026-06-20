@@ -11,7 +11,7 @@ const menu = document.getElementById("navMenu");
 const paquetes = [
     {
         id: 1,
-        imagen: "resources/images/Home.jpg",
+        imagen: "resources/home.jpg",
         nombre: "Classic Romance",
         categoria: "Classic",
         precio: 2500,
@@ -22,7 +22,7 @@ const paquetes = [
     },
     {
         id: 2,
-        imagen: "resources/images/Home.jpg",
+        imagen: "resources/home.jpg",
         nombre: "Luxury Dream",
         categoria: "Premium",
         precio: 5000,
@@ -33,7 +33,7 @@ const paquetes = [
     },
     {
         id: 3,
-        imagen: "resources/images/Home.jpg",
+        imagen: "resources/home.jpg",
         nombre: "Garden Bliss",
         categoria: "Outdoor",
         precio: 3500,
@@ -44,7 +44,7 @@ const paquetes = [
     },
     {
         id: 4,
-        imagen: "resources/images/Home.jpg",
+        imagen: "resources/home.jpg",
         nombre: "Beach Escape",
         categoria: "Beach",
         precio: 4200,
@@ -55,7 +55,7 @@ const paquetes = [
     },
     {
         id: 5,
-        imagen: "resources/images/Home.jpg",
+        imagen: "resources/home.jpg",
         nombre: "Royal Elegance",
         categoria: "Premium",
         precio: 6500,
@@ -71,7 +71,7 @@ const paquetes = [
     },
     {
         id: 6,
-        imagen: "resources/images/Home.jpg",
+        imagen: "resources/home.jpg",
         nombre: "Sunset Paradise",
         categoria: "Beach",
         precio: 4800,
@@ -87,7 +87,7 @@ const paquetes = [
     },
     {
         id: 7,
-        imagen: "resources/images/Home.jpg",
+        imagen: "resources/home.jpg",
         nombre: "Forest Fairytale",
         categoria: "Outdoor",
         precio: 3900,
@@ -103,7 +103,7 @@ const paquetes = [
     },
     {
         id: 8,
-        imagen: "resources/images/Home.jpg",
+        imagen: "resources/home.jpg",
         nombre: "Golden Memories",
         categoria: "Classic",
         precio: 3100,
@@ -119,7 +119,7 @@ const paquetes = [
     },
     {
         id: 9,
-        imagen: "resources/images/Home.jpg",
+        imagen: "resources/home.jpg",
         nombre: "Diamond Celebration",
         categoria: "Premium",
         precio: 7200,
@@ -135,7 +135,7 @@ const paquetes = [
     },
     {
         id: 10,
-        imagen: "resources/images/Home.jpg",
+        imagen: "resources/home.jpg",
         nombre: "Ocean Breeze",
         categoria: "Beach",
         precio: 4500,
@@ -150,6 +150,36 @@ const paquetes = [
         favorite: false
     }
 ];
+
+const heroLoad = {
+  title: "ORGANIZE YOUR DREAM WEDDING",
+  subtitle: "At EverAfter, we bring all your wedding planning needs together in one place. We give you the tools to plan your perfect day with confidence, creativity and joy",
+  columns: [
+    {
+      type: "text-image",
+      image: "resources/images/ejemplo1.jpg",
+      alt: "Ejemplo #1",
+      text: "Your dream wedding starts here. EverAfter is designed to help you plan every detail with ease, from choosing the perfect decoration to organizing every special moment"
+    },
+    {
+      type: "image-only",
+      image: "resources/images/ejemplo2.jpg",
+      alt: "Ejemplo #2"
+    },
+    {
+      type: "image-text",
+      image: "resources/images/ejemplo3.jpg",
+      alt: "Ejemplo #3",
+      text: "Every love story is unique, and your wedding should reflect that. With EverAfter, you have everything you need in one place to create a day that you and your guests will remember forever"
+    }
+  ],
+  cta: {
+    label: "Organize your wedding →",
+    link: "budget.html"
+  }
+};
+
+
 
 
 // color header
@@ -180,6 +210,31 @@ function mostrarMenu() {
     menu.classList.toggle("activo");
 }
 
+//hero
+function cargarHero() {
+    const heroSection = document.querySelector('.hero');
+
+    heroSection.innerHTML = `
+        <h1><strong>${heroLoad.title}</strong></h1>
+        <h2>${heroLoad.subtitle}</h2>
+        <section class="hero-grid">
+            <article class="hero-col-left">
+                <img src="${heroLoad.columns[0].image}" alt="${heroLoad.columns[0].alt}">
+                <p>${heroLoad.columns[0].text}</p>
+            </article>
+            <figure class="hero-col-center">
+                <img src="${heroLoad.columns[1].image}" alt="${heroLoad.columns[1].alt}">
+            </figure>
+            <article class="hero-col-right">
+                <p>${heroLoad.columns[2].text}</p>
+                <img src="${heroLoad.columns[2].image}" alt="${heroLoad.columns[2].alt}">
+            </article>
+            <h3><a href="${heroLoad.cta.link}">${heroLoad.cta.label}</a></h3>
+        </section>
+    `;
+}
+
+//solucion
 let favorites =
     JSON.parse(localStorage.getItem("favorites")) || [];
 
@@ -396,6 +451,9 @@ function inicializarPaquetes() {
     configurarEventosBusqueda();
 }
 
+
+
+
 // eventos
 window.addEventListener("scroll", cambiarColorHeader);
 
@@ -404,6 +462,11 @@ logos.forEach(logo => {
 });
 
 btnNav.addEventListener("click", mostrarMenu);
+
+document.addEventListener('DOMContentLoaded', cargarHero);
 cargarFavorites();
 inicializarPaquetes();
-document.getElementById('searchInput').addEventListener('input', e => filtrar(e.target.value));
+const searchInput = document.getElementById('searchInput');
+if (searchInput) {
+    searchInput.addEventListener('input', e => filtrarPaquetes());
+}
