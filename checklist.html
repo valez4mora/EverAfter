@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/checklist.css">
+    <title>EverAfter — Checklist</title>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="nav-logo">EverAfter</div>
+        <div class="nav-links">
+            <a href="menu.html">Home</a>
+            <a href="budget.html">Budget</a>
+            <a href="checklist.html" class="active">Checklist</a>
+        </div>
+    </nav>
+
+    <div class="page">
+        <div class="page-tag">Task management</div>
+        <h1 class="page-title">Your Checklist</h1>
+        <p class="page-sub">Add everything you need for your big day.</p>
+
+        <div class="progress-wrap">
+            <div class="progress-track">
+                <div class="progress-fill" id="bar"></div>
+            </div>
+            <div class="progress-text" id="prog-text">0 of 0 completed</div>
+        </div>
+
+        <div class="add-row">
+            <input class="add-input" id="input" placeholder="Add a task..." onkeydown="if(event.key==='Enter') add()">
+            <button class="add-btn" onclick="add()">+</button>
+        </div>
+
+        <div class="task-list" id="list"></div>
+    </div>
+
+    <script>
+        let tasks = JSON.parse(localStorage.getItem('ea_tasks') || '[]');
+
+        function save() {
+            localStorage.setItem('ea_tasks', JSON.stringify(tasks));
+        }
+
+        function render() {
+            const list = document.getElementById('list');
+            const done = tasks.filter(t => t.done).length;
+            const total = tasks.length;
+
+            document.getElementById('bar').style.width = total ? (done / total * 100) + '%' : '0%';
+            document.getElementById('prog-text').textContent = `${done} of ${total} completed`;
+
+            if (!total) {
+                list.innerHTML = '<div class="empty">No tasks yet — add one above</div>';
+                return;
+            }
+
+            list.innerHTML = '';
+            tasks.forEach((t, i) => {
+                const row = document.createElement('div');
+                row.className = 'task';
+                row.innerHTML = `
+                    <div class="check ${t.done ? 'done' : ''}" onclick="toggle(${i})"></div>
+                    <div class="task-text ${t.done ? 'done' : ''}">${t.text}</div>
+                    <button class="del-btn" onclick="remove(${i})">✕</button>
+                `;
+                list.appendChild(row);
+            });
+        }
+
+        function add() {
+            const input = document.getElementById('input');
+            const text = input.value.trim();
+            if (!text) return;
+            tasks.push({ text, done: false });
+            input.value = '';
+            save();
+            render();
+        }
+
+        function toggle(i) {
+            tasks[i].done = !tasks[i].done;
+            save();
+            render();
+        }
+
+        function remove(i) {
+            tasks.splice(i, 1);
+            save();
+            render();
+        }
+
+        render();
+    </script>
+
+</body>
+
+</html>
