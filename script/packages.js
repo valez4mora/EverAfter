@@ -41,33 +41,28 @@ function filtrarPaquetes() {
 }
 
 function crearCard(paquete) {
-
-    const textoFavorito =
-        paquete.favorite
-            ? "Unfavorite ❤"
-            : "Favorite ❤";
+    const textoFav = paquete.favorite ? "♥ Saved" : "♡ Save";
     const card = document.createElement("article");
-
     card.className = "package-card";
     card.onclick = () => mostrarDetalle(paquete.id);
     card.innerHTML = `
-        
-        <h3>${paquete.nombre}</h3>
-
-        <p> Category: ${paquete.categoria}</p>
-
-        <p>Price: $${paquete.precio}</p>
-
-        
-
-        <div class="card-footer">
-
-        <button onclick="event.stopPropagation();
-            agregarFavorito(${paquete.id})">
-            ${textoFavorito}
-        </button>
-
-</div>`;
+        <div class="card-img">
+            <img src="${paquete.imagen}" alt="${paquete.nombre}">
+        </div>
+        <div class="card-body">
+            <div class="card-top">
+                <span class="card-name">${paquete.nombre}</span>
+                <span class="card-badge">${paquete.categoria}</span>
+            </div>
+            <div class="card-bottom">
+                <span class="card-price">$${paquete.precio.toLocaleString()}</span>
+                <button class="${paquete.favorite ? 'fav-btn active' : 'fav-btn'}"
+                    onclick="event.stopPropagation(); agregarFavorito(${paquete.id})">
+                    ${textoFav}
+                </button>
+            </div>
+        </div>
+    `;
     return card;
 }
 
