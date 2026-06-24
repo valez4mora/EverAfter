@@ -185,8 +185,8 @@ select option {
 
 .fav-btn:hover,
 .fav-btn.active {
-  border-color: #d4af64;
-  color: #d4af64;
+  border-color: #dbd5c7;
+  color: #dbd5c7;
   background: rgba(212, 175, 100, 0.08);
 }
 
