@@ -1,0 +1,27 @@
+{
+    "title": "ORGANIZE YOUR DREAM WEDDING",
+    "subtitle": "At EverAfter, we bring all your wedding planning needs together in one place. We give you the tools to plan your perfect day with confidence, creativity and joy",
+    "columns": [
+        {
+            "type": "text-image",
+            "image": "resources/images/ejemplo1.jpg",
+            "alt": "Ejemplo #1",
+            "text": "Your dream wedding starts here. EverAfter is designed to help you plan every detail with ease, from choosing the perfect decoration to organizing every special moment"
+        },
+        {
+            "type": "image-only",
+            "image": "resources/images/ejemplo2.jpg",
+            "alt": "Ejemplo #2"
+        },
+        {
+            "type": "image-text",
+            "image": "resources/images/ejemplo3.jpg",
+            "alt": "Ejemplo #3",
+            "text": "Every love story is unique, and your wedding should reflect that. With EverAfter, you have everything you need in one place to create a day that you and your guests will remember forever"
+        }
+    ],
+    "cta": {
+        "label": "Organize your wedding →",
+        "link": "form.html"
+    }
+}

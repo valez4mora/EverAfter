@@ -5,34 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
     <title>EverAfter</title>
 </head>
 
 <body>
+    <header id="main-header">
+        <button id="btnNav">
+            <img src="resources/images/menu.png" alt="Menu">
+        </button>
+        <h1 class="titulo logo"> EverAfter </h1>
+
+        <nav id="navMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="#main-footer">Contact</a></li>
+                <li class="nav-start"><a href="form.html">Let's Start</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <section class="mosaic-section">
 
         <aside class="mosaic-left">
-            <header>
-                <h1><em>Ways We Can</em><br>Work Together</h1>
-            </header>
+            <h1><em>Ways We Can</em><br>Work Together</h1>
+
 
             <article class="form-section">
-                <p>Enter your wedding details and we'll show you the available options.</p>
-                <form action="submit_form.php" method="post">
 
-                    <label for="name1">Partner Name</label>
-                    <input type="text" id="name1" name="name1" required>
+                <form id="weddingForm">
 
-                    <label for="name2">& Partner Name</label>
-                    <input type="text" id="name2" name="name2" required>
+                    <!-- step 1 Datos personales -->
+                    <section class="form-step active" id="step1">
+                        <p>Enter your wedding details and we'll show you the available options.</p>
 
-                    <label for="date">Wedding date</label>
-                    <input type="date" id="date" name="date" required>
+                        <label for="name1">Partner Name</label>
+                        <input type="text" id="name1" name="name1" required>
 
-                    <input type="submit" value="Submit">
+                        <label for="name2">& Partner Name</label>
+                        <input type="text" id="name2" name="name2" required>
 
+                        <label for="date">Wedding date</label>
+                        <input type="date" id="date" name="date" required>
+
+                        <div class="step-actions">
+                            <button type="button" class="form-btn" onclick="irAlPaso(2)">Next →</button>
+                        </div>
+                    </section>
+
+                    <!-- step 2 Elegir paquete -->
+                    <section class="form-step" id="step2">
+                        <p class = "picker-text">Pick the package that fits your dream wedding.</p>
+
+                        <ul id="package-picker"></ul>
+                        <p id="step2-error" class="form-error"></p>
+                        <div class="step-actions">
+                            <button type="button" class="form-btn form-btn-back" onclick="irAlPaso(1)">← Back</button>
+                            <button type="button" class="form-btn" id="btnNextStep2">Next →</button>
+                        </div>
+                    </section>
+
+                    <!-- step 3 Confirmar -->
+                    <section class="form-step" id="step3">
+                        <p id="summary-details"></p>
+
+                        <div class="step-actions">
+                            <button type="button" class="form-btn form-btn-back" onclick="irAlPaso(2)">← Back</button>
+                            <input type="submit" value="Submit" class="form-btn">
+                        </div>
+                    </section>
+
+                    <!-- step 4 Confirmación final -->
+                    <section class="form-step" id="step4">
+                        <div id="package-details" style="display:none;"></div>
+                        <div id="confirmation-container"></div>
+                    </section>
                 </form>
+
             </article>
         </aside>
 
@@ -51,6 +102,19 @@
 
     </section>
 
+    <footer id="main-footer">
+        <h2>EverAfter</h2>
+        <p>Where beautiful weddings begin with thoughtful planning</p>
+        <hr>
+        <section class="footer-info">
+            <p>&#9993; EverAfter@si.com</p>
+            <p>&#9742; +506 1234</p>
+        </section>
+        <p class="footer-copy">&copy; 2026 EverAfter. All rights reserved.</p>
+    </footer>
+    <script src="script/dataLoader.js"></script>
+    <script src="script/shared.js"></script>
+    <script src="script/form.js"></script>
 </body>
 
 </html>

@@ -23,10 +23,12 @@ body {
 /* ----------------- Mosaic Section ----------------- */
 /* Layout de dos columnas: izquierda más estrecha, derecha más ancha */
 .mosaic-section {
+    margin-top: 4rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     min-height: 100vh;
     /* Ocupa al menos toda la altura de la pantalla */
+    border-bottom: 1px solid #F5EFE6;
 }
 
 /* Columna izquierda: contenido centrado verticalmente */
@@ -42,12 +44,14 @@ body {
 /* Título principal en fuente serif elegante */
 .mosaic-left h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 400;
     line-height: 1.15;
     /* Interlineado ajustado */
     color: #F5EFE6;
     margin-bottom: 1rem;
+
+    transform: translateY(-1.5rem);
 }
 
 /* Parte en cursiva del título */
@@ -95,7 +99,7 @@ body {
     border-radius: 4px;
 }
 
-/* Botón de envío con estilo minimalista */
+/* Botón de envío */
 .form-section input[type="submit"] {
     margin-top: 1.5rem;
     border: 0.5px solid rgba(255, 255, 255, 0.35);
@@ -112,6 +116,347 @@ body {
 /* Efecto hover: fondo levemente visible al pasar el mouse */
 .form-section input[type="submit"]:hover {
     background: rgba(255, 255, 255, 0.08);
+}
+
+/* ----------------- Form Steps ----------------- */
+/* Cada paso del formulario está oculto por defecto */
+.form-step {
+    display: none;
+}
+
+/*mostrar cada step*/
+.form-step.active {
+    display: block;
+}
+
+/* div botones de navegación de los steps */
+.step-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+/* Botones de navegación entre steps  */
+.form-btn {
+    margin-top: 1.5rem;
+    border: 0.5px solid rgba(255, 255, 255, 0.35);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0.65rem 1.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 2px;
+    font-family: inherit;
+}
+
+.form-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-btn-back {
+    margin-left: 0;
+    opacity: 0.5;
+    border-color: transparent;
+}
+
+.form-btn-back:hover {
+    opacity: 0.8;
+    background: transparent;
+}
+
+/* ----------------- Package Picker (Step 2) ----------------- */
+.form-error {
+    color: #e08a7d;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+#step2 .picker-text{
+    transform: translateY(-2rem);
+}
+
+#package-picker {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    margin-top: -2.5rem;
+    max-height: 510px;
+    overflow-y: auto;
+}
+
+#package-picker::-webkit-scrollbar {
+    width: 8px;
+}
+
+#package-picker::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Cada paquete como tarjeta */
+.mini-package-card {
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    height: auto;
+    border-radius: 4px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    display: block;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.mini-package-card:hover {
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Tarjeta marcada como elegida */
+.mini-package-card.selected {
+    border-color: #F5EFE6;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* Fila superior: nombre + precio */
+.mpc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mpc-name {
+    font-size: 1rem;
+}
+
+.mpc-price {
+    opacity: 0.6;
+    font-size: 0.85rem;
+}
+
+/* Ubicación del paquete */
+.mpc-location {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    margin-top: 0.2rem;
+}
+
+/* Descripción corta del paquete */
+.mpc-desc {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.4rem;
+}
+
+/* Lista de servicios incluidos */
+.mpc-includes {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin-top: 0.4rem;
+}
+
+.mpc-includes strong {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Etiqueta del input de invitados */
+.mpc-guests-label {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 0.6rem;
+    margin-bottom: 0.3rem;
+}
+
+/* Input editable de cantidad de invitados */
+.mpc-guests-input {
+    width: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    font-family: inherit;
+    border-radius: 4px;
+}
+
+/* ----------------- Summary (Step 3) ----------------- */
+/* Resumen final antes de enviar el formulario */
+#summary-details {
+    font-size: 1.05rem;
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 1rem 0;
+}
+
+/* Resalta las etiquetas del resumen */
+#summary-details strong {
+    color: #F5EFE6;
+    font-weight: normal;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+/* ----------------- Summary (Step 4) ----------------- */
+/* Cuando el mosaico está oculto el form ocupa todo el ancho */
+#confirmation-container {
+    display: grid;
+    grid-template-columns: minmax(280px, 420px) auto;
+    gap: 2.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.confirmation-card {
+    display: flex;
+    justify-content: center;
+}
+
+.confirmation-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.8rem;
+    color: #F5EFE6;
+    margin-bottom: 1.8rem;
+}
+
+/* bloques de resumen */
+.summary-block {
+    margin-bottom: 1.8rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.12);
+}
+
+.summary-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.summary-block-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.15rem;
+    color: #F5EFE6;
+    margin-bottom: 0.6rem;
+}
+
+.summary-block p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.3rem;
+}
+
+.summary-block p strong {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: normal;
+}
+
+.edit-btn {
+    background: transparent;
+    border: 0.5px solid rgba(255, 255, 255, 0.35);
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: normal;
+    cursor: pointer;
+    padding: 0.65rem 1.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-family: inherit;
+    margin-top: 0.8rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.edit-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ----------------- Details Card ----------------- */
+.details-card {
+    background: #FFFAF3;
+    border-radius: 10px;
+    align-items: center;
+    width: 320px;
+    height: auto;
+    text-align: center;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    color: #250902;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.details-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    margin-top: 0.8rem;
+}
+
+.details-card .description {
+    text-align: center;
+    margin-bottom: 0.6rem;
+    color: rgba(37, 9, 2, 0.65);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.details-card p {
+    margin-left: 1rem;
+    text-align: left;
+    color: #250902;
+    font-size: 0.78rem;
+}
+
+.details-card li {
+    list-style: none;
+    background: #5a544c;
+    color: #FFFAF3;
+    border-radius: 6px;
+    font-size: 0.62rem;
+    line-height: 1.3;
+    padding: 0.5rem 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.details-card img {
+    margin: 0.8rem auto 0;
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.details-card ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.4rem;
+    margin: 0.6rem 1rem;
+}
+
+.details-card p,
+.details-card h2,
+.details-card .description {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    margin: 0.5rem 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.column {
+    grid-template-columns: 1fr;
+    align-items: center;
 }
 
 /* ----------------- Mosaic Grid ----------------- */
@@ -189,4 +534,53 @@ body {
 .p10 {
     grid-column: 3;
     grid-row: 4;
+}
+
+/* ----------------- Media Query ----------------- */
+@media (max-width: 700px) {
+
+    .mosaic-section {
+        grid-template-columns: 1fr;
+    }
+
+    .mosaic-left {
+        padding: 3rem 1.5rem;
+    }
+
+    .mosaic-left h1 {
+        font-size: 2.1rem;
+    }
+
+    .form-btn,
+    .form-btn-back {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        display: block;
+    }
+
+    .step-actions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #package-picker {
+        max-height: 220px;
+    }
+
+    .mini-package-card {
+        padding: 0.6rem 0.8rem;
+    }
+    
+
+    /* El mosaico baja de altura y va debajo del form */
+    .mosaic-right {
+        height: 70vh;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 6px;
+        padding: 6px;
+    }
+
+    #confirmation-container{
+        grid-template-columns: 1fr;
+    }
 }

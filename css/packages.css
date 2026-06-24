@@ -74,15 +74,13 @@ select option {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.4rem;
-  
+
 }
 #packages-container{
   overflow-y: auto;
    max-height: 530px;
    scroll-behavior: smooth;
-   
 }
-
 #packages-container::-webkit-scrollbar {
     width: 8px;
 }
@@ -92,13 +90,11 @@ select option {
     border-radius: 10px;
 }
  .package-card {
-  background: #FFFAF3;
+  background: #403a31;
   margin-bottom: 2.5rem;
   margin-right: 2rem;
   border-radius: 3%;
   cursor: pointer;
-  
-  color: #250902;
 }
 
 .package-card h3 {
@@ -113,8 +109,8 @@ select option {
 }
 
 .package-card button {
-  background: #EDDCC6;
-  color: #250902;
+  background: #5a544c;
+  color: #F5EFE6;
   border: none;
   padding: 0.25rem;
   border-radius: 10%;
@@ -131,15 +127,14 @@ select option {
 }
 
 .details-card {
-  background: #FFFAF3;
+  background: #403a31;
   border-radius: 10px;
   align-items: center;
   max-width: 500px;
   height: 530px;
   text-align: center;
   padding-bottom: 1.35rem;
-  
-  color: #250902;
+  border: #403a31;
 }
 
 .details-card h2 {
