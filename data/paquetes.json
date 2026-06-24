@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "imagen": "resources/images/home.jpg",
+        "imagen": "resources/images/Home.jpg",
         "nombre": "Classic Romance",
         "categoria": "Classic",
         "lugar": "Cartago Centro",
@@ -14,7 +14,7 @@
     },
     {
         "id": 2,
-        "imagen": "resources/images/home.jpg",
+        "imagen": "resources/images/Home.jpg",
         "nombre": "Luxury Dream",
         "categoria": "Premium",
         "lugar": "Hacienda AltaGracia, Pérez Zeledón",
@@ -27,7 +27,7 @@
     },
     {
         "id": 3,
-        "imagen": "resources/images/home.jpg",
+        "imagen": "resources/images/Home.jpg",
         "nombre": "Garden Bliss",
         "categoria": "Outdoor",
         "lugar": "Jardines del Castillo Country Club, Heredia",
@@ -40,7 +40,7 @@
     },
     {
         "id": 4,
-        "imagen": "resources/images/home.jpg",
+        "imagen": "resources/images/Home.jpg",
         "nombre": "Beach Escape",
         "categoria": "Beach",
         "lugar": "Playa Conchal, Guanacaste",
@@ -53,7 +53,7 @@
     },
     {
         "id": 5,
-        "imagen": "resources/images/home.jpg",
+        "imagen": "resources/images/Home.jpg",
         "nombre": "Royal Elegance",
         "categoria": "Premium",
         "lugar": "The Springs Resort, La Fortuna",
@@ -66,7 +66,7 @@
     },
     {
         "id": 6,
-        "imagen": "resources/images/home.jpg",
+        "imagen": "resources/images/Home.jpg",
         "nombre": "Sunset Paradise",
         "categoria": "Beach",
         "lugar": "Playa Flamingo, Guanacaste",
@@ -79,7 +79,7 @@
     },
     {
         "id": 7,
-        "imagen": "resources/images/home.jpg",
+        "imagen": "resources/images/Home.jpg",
         "nombre": "Forest Fairytale",
         "categoria": "Outdoor",
         "lugar": "Monteverde, Puntarenas",
@@ -92,7 +92,7 @@
     },
     {
         "id": 8,
-        "imagen": "resources/images/home.jpg",
+        "imagen": "resources/images/Home.jpg",
         "nombre": "Golden Memories",
         "categoria": "Classic",
         "lugar": "San José Centro",
@@ -105,7 +105,7 @@
     },
     {
         "id": 9,
-        "imagen": "resources/images/home.jpg",
+        "imagen": "resources/images/Home.jpg",
         "nombre": "Diamond Celebration",
         "categoria": "Premium",
         "lugar": "Papagayo Peninsula, Guanacaste",
@@ -118,7 +118,7 @@
     },
     {
         "id": 10,
-        "imagen": "resources/images/home.jpg",
+        "imagen": "resources/images/Home.jpg",
         "nombre": "Ocean Breeze",
         "categoria": "Beach",
         "lugar": "Manuel Antonio, Quepos",
