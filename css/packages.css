@@ -2,14 +2,14 @@
 
 /* ── Variables de color y fondo ── */
 :root {
-  --crema:      #f5efe6;
-  --beige:      #e6dbc9;
-  --beige-muted:#d1c5b0;
-  --gris:       rgba(184, 183, 178, 0.4);
-  --borde:      rgba(231, 229, 224, 0.25);
+  --crema: #f5efe6;
+  --beige: #e6dbc9;
+  --beige-muted: #d1c5b0;
+  --gris: rgba(184, 183, 178, 0.4);
+  --borde: rgba(231, 229, 224, 0.25);
   --fondo-body: #250902;
   --fondo-card: #2e1a0e;
-  --fondo-input:#2a1208;
+  --fondo-input: #2a1208;
 }
 
 /* ── Reset global ── */

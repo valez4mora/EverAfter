@@ -9,7 +9,11 @@
         "invitados": 0,
         "maxInvitados": 100,
         "descripcion": "Perfect package for intimate weddings.",
-        "incluye": ["DJ", "Photography", "Wedding Cake"],
+        "incluye": [
+            "DJ",
+            "Photography",
+            "Wedding Cake"
+        ],
         "favorite": false
     },
     {
@@ -22,7 +26,11 @@
         "invitados": 0,
         "maxInvitados": 200,
         "descripcion": "Luxury wedding experience.",
-        "incluye": ["Live Band", "Video", "Premium Decoration"],
+        "incluye": [
+            "Live Band",
+            "Video",
+            "Premium Decoration"
+        ],
         "favorite": false
     },
     {
@@ -35,7 +43,11 @@
         "invitados": 0,
         "maxInvitados": 150,
         "descripcion": "Ideal for garden ceremonies.",
-        "incluye": ["Floral Arch", "DJ", "Photography"],
+        "incluye": [
+            "Floral Arch",
+            "DJ",
+            "Photography"
+        ],
         "favorite": false
     },
     {
@@ -48,7 +60,11 @@
         "invitados": 0,
         "maxInvitados": 120,
         "descripcion": "Romantic beach wedding.",
-        "incluye": ["Beach Setup", "Photography", "Cocktail Service"],
+        "incluye": [
+            "Beach Setup",
+            "Photography",
+            "Cocktail Service"
+        ],
         "favorite": false
     },
     {
@@ -61,7 +77,12 @@
         "invitados": 0,
         "maxInvitados": 250,
         "descripcion": "Sophisticated luxury wedding with exclusive services.",
-        "incluye": ["Live Orchestra", "Premium Decoration", "Professional Video", "Luxury Catering"],
+        "incluye": [
+            "Live Orchestra",
+            "Premium Decoration",
+            "Professional Video",
+            "Luxury Catering"
+        ],
         "favorite": false
     },
     {
@@ -74,7 +95,12 @@
         "invitados": 0,
         "maxInvitados": 140,
         "descripcion": "Celebrate your wedding with a breathtaking sunset view.",
-        "incluye": ["Beach Ceremony", "Cocktail Reception", "Photography", "Wedding Cake"],
+        "incluye": [
+            "Beach Ceremony",
+            "Cocktail Reception",
+            "Photography",
+            "Wedding Cake"
+        ],
         "favorite": false
     },
     {
@@ -87,7 +113,12 @@
         "invitados": 0,
         "maxInvitados": 130,
         "descripcion": "A magical wedding surrounded by nature.",
-        "incluye": ["Floral Decoration", "DJ", "Photography", "Garden Reception"],
+        "incluye": [
+            "Floral Decoration",
+            "DJ",
+            "Photography",
+            "Garden Reception"
+        ],
         "favorite": false
     },
     {
@@ -100,7 +131,12 @@
         "invitados": 0,
         "maxInvitados": 120,
         "descripcion": "Traditional wedding package with timeless elegance.",
-        "incluye": ["Photography", "Wedding Cake", "DJ", "Formal Decoration"],
+        "incluye": [
+            "Photography",
+            "Wedding Cake",
+            "DJ",
+            "Formal Decoration"
+        ],
         "favorite": false
     },
     {
@@ -113,7 +149,12 @@
         "invitados": 0,
         "maxInvitados": 300,
         "descripcion": "Our most exclusive package for unforgettable celebrations.",
-        "incluye": ["Live Band", "Luxury Catering", "Premium Decoration", "Drone Video"],
+        "incluye": [
+            "Live Band",
+            "Luxury Catering",
+            "Premium Decoration",
+            "Drone Video"
+        ],
         "favorite": false
     },
     {
@@ -126,7 +167,12 @@
         "invitados": 0,
         "maxInvitados": 160,
         "descripcion": "Elegant seaside wedding with a relaxed atmosphere.",
-        "incluye": ["Beach Setup", "Photography", "Cocktail Service", "Live Music"],
+        "incluye": [
+            "Beach Setup",
+            "Photography",
+            "Cocktail Service",
+            "Live Music"
+        ],
         "favorite": false
     }
 ]

@@ -1,14 +1,13 @@
-/* footer */
-
+/* ── Footer ── */
 #main-footer {
     background: #250902;
     color: #F5EFE6;
     text-align: center;
-    padding: 1rem 1rem;
-    
+    padding: 1rem;
 }
 
-#main-footer h2 { /*Titulo del footer*/
+/* Título */
+#main-footer h2 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 2.5rem;
@@ -16,19 +15,22 @@
     margin: 0 0 0.5rem;
 }
 
-#main-footer p { /*parrafo*/
+/* Subtítulo */
+#main-footer p {
     font-size: 0.85rem;
     margin: 0 0 1.5rem;
 }
 
-#main-footer hr { /*Linea*/
+/* Línea divisora */
+#main-footer hr {
     border: none;
     border-top: 1px solid #F5EFE6;
     max-width: 300px;
     margin: 0 auto 1.5rem;
 }
 
-#main-footer .footer-info { /*Info de contacto*/
+/* Info de contacto */
+#main-footer .footer-info {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -39,7 +41,8 @@
     margin: 0;
 }
 
-#main-footer .footer-copy { /*Copyright*/
+/* Copyright */
+#main-footer .footer-copy {
     font-size: 0.75rem;
     color: rgba(245, 239, 230, 0.4);
     margin: 0;

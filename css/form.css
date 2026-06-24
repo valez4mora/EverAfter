@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Cormorant+Garamond:wght@300;400&display=swap');
 
-/* ----------------- Reset ----------------- */
+/* ── Reset global ── */
 *,
 *::before,
 *::after {
@@ -14,60 +14,53 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ── Base del documento ── */
 body {
     background-color: #250902;
     color: #fff;
     font-family: 'Cormorant Garamond', serif;
 }
 
-/* ----------------- Mosaic Section ----------------- */
-/* Layout de dos columnas: izquierda más estrecha, derecha más ancha */
+/* ── Layout principal: dos columnas (form | mosaico) ── */
 .mosaic-section {
     margin-top: 4rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     min-height: 100vh;
-    /* Ocupa al menos toda la altura de la pantalla */
     border-bottom: 1px solid #F5EFE6;
 }
 
-/* Columna izquierda: contenido centrado verticalmente */
+/* ── Columna izquierda: título + formulario ── */
 .mosaic-left {
     padding: 3.5rem 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    /* Espacio entre el título y el formulario */
 }
 
-/* Título principal en fuente serif elegante */
 .mosaic-left h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     font-weight: 400;
     line-height: 1.15;
-    /* Interlineado ajustado */
     color: #F5EFE6;
     margin-bottom: 1rem;
-
     transform: translateY(-1.5rem);
 }
 
-/* Parte en cursiva del título */
 .mosaic-left h1 em {
     font-style: italic;
 }
 
-/* Lista de servicios con líneas divisoras sutiles */
+/* Lista de servicios con línea divisora superior */
 .services-list {
     list-style: none;
     border-top: 0.5px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 2.5rem;
 }
 
-/* ----------------- Form Section ----------------- */
-/* Descripción del formulario en tono suave */
+/* ── Formulario ── */
 .form-section p {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.45);
@@ -75,7 +68,6 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* Etiquetas de los campos en mayúsculas y espaciadas */
 .form-section label {
     display: block;
     font-size: 0.72rem;
@@ -86,7 +78,6 @@ body {
     margin-top: 1rem;
 }
 
-/* Campos de texto y fecha con fondo translúcido */
 .form-section input[type="text"],
 .form-section input[type="date"] {
     width: 100%;
@@ -99,44 +90,8 @@ body {
     border-radius: 4px;
 }
 
-/* Botón de envío */
-.form-section input[type="submit"] {
-    margin-top: 1.5rem;
-    border: 0.5px solid rgba(255, 255, 255, 0.35);
-    color: rgba(255, 255, 255, 0.75);
-    padding: 0.65rem 1.5rem;
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    cursor: pointer;
-    background: transparent;
-    border-radius: 2px;
-}
-
-/* Efecto hover: fondo levemente visible al pasar el mouse */
-.form-section input[type="submit"]:hover {
-    background: rgba(255, 255, 255, 0.08);
-}
-
-/* ----------------- Form Steps ----------------- */
-/* Cada paso del formulario está oculto por defecto */
-.form-step {
-    display: none;
-}
-
-/*mostrar cada step*/
-.form-step.active {
-    display: block;
-}
-
-/* div botones de navegación de los steps */
-.step-actions {
-    display: flex;
-    gap: 0.6rem;
-    margin-top: 1rem;
-}
-
-/* Botones de navegación entre steps  */
+/* ── Botones del formulario ── */
+.form-section input[type="submit"],
 .form-btn {
     margin-top: 1.5rem;
     border: 0.5px solid rgba(255, 255, 255, 0.35);
@@ -151,12 +106,28 @@ body {
     font-family: inherit;
 }
 
+.form-section input[type="submit"]:hover,
 .form-btn:hover {
     background: rgba(255, 255, 255, 0.08);
 }
 
+/* ── Steps del formulario ── */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+/* Navegación entre steps */
+.step-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
 .form-btn-back {
-    margin-left: 0;
     opacity: 0.5;
     border-color: transparent;
 }
@@ -166,14 +137,14 @@ body {
     background: transparent;
 }
 
-/* ----------------- Package Picker (Step 2) ----------------- */
+/* ── Step 2: selector de paquete ── */
 .form-error {
     color: #e08a7d;
     font-size: 0.8rem;
     margin-top: 0.5rem;
 }
 
-#step2 .picker-text{
+#step2 .picker-text {
     transform: translateY(-2rem);
 }
 
@@ -195,10 +166,9 @@ body {
     border-radius: 10px;
 }
 
-/* Cada paquete como tarjeta */
+/* Tarjeta mini de cada paquete */
 .mini-package-card {
     border: 0.5px solid rgba(255, 255, 255, 0.2);
-    height: auto;
     border-radius: 4px;
     padding: 0.7rem 1rem;
     margin-bottom: 0.5rem;
@@ -211,7 +181,6 @@ body {
     border-color: rgba(255, 255, 255, 0.45);
 }
 
-/* Tarjeta marcada como elegida */
 .mini-package-card.selected {
     border-color: #F5EFE6;
     background: rgba(255, 255, 255, 0.06);
@@ -233,7 +202,6 @@ body {
     font-size: 0.85rem;
 }
 
-/* Ubicación del paquete */
 .mpc-location {
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.4);
@@ -241,14 +209,12 @@ body {
     margin-top: 0.2rem;
 }
 
-/* Descripción corta del paquete */
 .mpc-desc {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.5);
     margin-top: 0.4rem;
 }
 
-/* Lista de servicios incluidos */
 .mpc-includes {
     font-size: 0.78rem;
     color: rgba(255, 255, 255, 0.45);
@@ -261,7 +227,7 @@ body {
     font-style: italic;
 }
 
-/* Etiqueta del input de invitados */
+/* Input de cantidad de invitados */
 .mpc-guests-label {
     display: block;
     font-size: 0.65rem;
@@ -272,7 +238,6 @@ body {
     margin-bottom: 0.3rem;
 }
 
-/* Input editable de cantidad de invitados */
 .mpc-guests-input {
     width: 80px;
     background: rgba(255, 255, 255, 0.05);
@@ -283,8 +248,7 @@ body {
     border-radius: 4px;
 }
 
-/* ----------------- Summary (Step 3) ----------------- */
-/* Resumen final antes de enviar el formulario */
+/* ── Step 3: resumen antes de enviar ── */
 #summary-details {
     font-size: 1.05rem;
     line-height: 2;
@@ -292,7 +256,6 @@ body {
     margin: 1rem 0;
 }
 
-/* Resalta las etiquetas del resumen */
 #summary-details strong {
     color: #F5EFE6;
     font-weight: normal;
@@ -300,8 +263,7 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-/* ----------------- Summary (Step 4) ----------------- */
-/* Cuando el mosaico está oculto el form ocupa todo el ancho */
+/* ── Step 4: confirmación final ── */
 #confirmation-container {
     display: grid;
     grid-template-columns: minmax(280px, 420px) auto;
@@ -324,7 +286,7 @@ body {
     margin-bottom: 1.8rem;
 }
 
-/* bloques de resumen */
+/* Bloques del resumen de confirmación */
 .summary-block {
     margin-bottom: 1.8rem;
     padding-bottom: 1.2rem;
@@ -356,6 +318,7 @@ body {
     font-weight: normal;
 }
 
+/* Botón de editar en la confirmación */
 .edit-btn {
     background: transparent;
     border: 0.5px solid rgba(255, 255, 255, 0.35);
@@ -369,18 +332,17 @@ body {
     border-radius: 2px;
     font-family: inherit;
     margin-top: 0.8rem;
-    transition: background 0.2s, transform 0.2s;
+    transition: background 0.2s;
 }
 
 .edit-btn:hover {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* ----------------- Details Card ----------------- */
+/* ── Tarjeta de detalle del paquete (confirmación) ── */
 .details-card {
     background: #FFFAF3;
     border-radius: 10px;
-    align-items: center;
     width: 320px;
     height: auto;
     text-align: center;
@@ -398,22 +360,45 @@ body {
 }
 
 .details-card .description {
-    text-align: center;
-    margin-bottom: 0.6rem;
     color: rgba(37, 9, 2, 0.65);
     font-size: 0.8rem;
     font-style: italic;
+    margin-bottom: 0.6rem;
 }
 
 .details-card p {
-    margin-left: 1rem;
     text-align: left;
     color: #250902;
     font-size: 0.78rem;
 }
 
-.details-card li {
+.details-card p,
+.details-card h2,
+.details-card .description {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    margin: 0.5rem 1rem;
+}
+
+.details-card img {
+    margin: 0.8rem auto 0;
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Grid de servicios incluidos */
+.details-card ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.4rem;
+    margin: 0.6rem 1rem;
     list-style: none;
+}
+
+.details-card li {
     background: #5a544c;
     color: #FFFAF3;
     border-radius: 6px;
@@ -426,41 +411,12 @@ body {
     text-align: center;
 }
 
-.details-card img {
-    margin: 0.8rem auto 0;
-    width: 90%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-}
-
-.details-card ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.4rem;
-    margin: 0.6rem 1rem;
-}
-
-.details-card p,
-.details-card h2,
-.details-card .description {
-    overflow-wrap: break-word;
-    word-break: break-word;
-    margin: 0.5rem 1rem;
-}
-
+/* ── Utilidades ── */
 .hidden {
     display: none !important;
 }
 
-.column {
-    grid-template-columns: 1fr;
-    align-items: center;
-}
-
-/* ----------------- Mosaic Grid ----------------- */
-/* Grid de 3 columnas y 4 filas para el mosaico de fotos */
+/* ── Mosaico de fotos (columna derecha) ── */
 .mosaic-right {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -470,14 +426,12 @@ body {
     height: 100vh;
 }
 
-/* Contenedor de cada foto */
 .photo {
     overflow: hidden;
     border-radius: 6px;
     background: #3a1a10;
 }
 
-/* La foto llena su celda sin deformarse */
 .photo img {
     width: 100%;
     height: 100%;
@@ -485,7 +439,7 @@ body {
     display: block;
 }
 
-/* Posiciones de cada foto en el grid */
+/* Posición de cada foto en el grid */
 .p1 {
     grid-column: 1;
     grid-row: 1 / 3;
@@ -536,7 +490,7 @@ body {
     grid-row: 4;
 }
 
-/* ----------------- Media Query ----------------- */
+/* ── Responsive ── */
 @media (max-width: 700px) {
 
     .mosaic-section {
@@ -554,7 +508,6 @@ body {
     .form-btn,
     .form-btn-back {
         width: 100%;
-        margin-left: 0;
         text-align: center;
         display: block;
     }
@@ -570,17 +523,14 @@ body {
     .mini-package-card {
         padding: 0.6rem 0.8rem;
     }
-    
 
-    /* El mosaico baja de altura y va debajo del form */
     .mosaic-right {
         height: 70vh;
-        grid-template-rows: repeat(4, 1fr);
         gap: 6px;
         padding: 6px;
     }
 
-    #confirmation-container{
+    #confirmation-container {
         grid-template-columns: 1fr;
     }
 }

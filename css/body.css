@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Cormorant+Garamond:wght@300;400&display=swap');
 
+/* ── Reset global ── */
 * {
-    /*propiedades generales*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,7 +13,7 @@ html {
     overscroll-behavior: none;
 }
 
-/*body*/
+/* ── Base del documento ── */
 body {
     background: #250902;
     color: #F5EFE6;
@@ -21,8 +21,7 @@ body {
     font-family: 'Cormorant Garamond', serif;
 }
 
-/* inicio */
-
+/* ── Sección inicio: texto + imagen en arco ── */
 #home {
     display: grid;
     grid-template-columns: 0.7fr 1fr;
@@ -32,7 +31,6 @@ body {
     gap: 2rem;
     background: #F5EFE6;
     color: #250902;
-    box-sizing: border-box;
     font-style: italic;
 }
 
@@ -42,7 +40,6 @@ body {
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: rgba(37, 9, 2, 0.6);
-    text-align: left;
     transform: translateY(-3rem);
 }
 
@@ -57,7 +54,6 @@ body {
     font-size: 2.8rem;
     font-weight: normal;
     line-height: 1.3;
-    text-align: left;
     transform: translateY(-2rem);
 }
 
@@ -66,13 +62,9 @@ body {
     border: none;
     border-top: 1px solid rgba(37, 9, 2, 0.3);
     margin: 0 0 1.5rem;
-    margin-right: auto;
-    transform: none;
 }
 
 #home p {
-    text-align: left;
-    transform: none;
     margin-bottom: 1.5rem;
 }
 
@@ -82,10 +74,10 @@ body {
     background: transparent;
     color: #250902;
     opacity: 0.7;
-    transform: translateY(1rem);
     font-weight: normal;
     border: 1px solid #250902;
     cursor: pointer;
+    transform: translateY(1rem);
 }
 
 #home button a {
@@ -93,9 +85,7 @@ body {
     text-decoration: none;
 }
 
-
-/* Imagen en arco y badge */
-
+/* Imagen en arco */
 .home-img-wrapper {
     position: relative;
     width: 100%;
@@ -117,6 +107,7 @@ body {
     display: block;
 }
 
+/* Badge inferior sobre la imagen */
 .home-badge {
     position: absolute;
     bottom: 1.5rem;
@@ -144,37 +135,31 @@ body {
     margin-top: 3px;
 }
 
-
-/* hero */
+/* ── Sección hero: galería de tres columnas ── */
 .hero {
-    /*seccion hero*/
     text-align: center;
     border-top: 1px solid #F5EFE6;
-    border-bottom: 1px solid#F5EFE6;
+    border-bottom: 1px solid #F5EFE6;
     color: #F5EFE6;
 }
 
 .hero h1 {
-    /*titulo*/
     font-family: 'Playfair Display', serif;
-    padding-top: 5%;
-    font-size: 30px;
     font-size: 2.8rem;
+    padding-top: 5%;
 }
 
 .hero h2 {
-    /*segundo titulo*/
     padding-top: 3%;
     font-size: 0.85rem;
     font-weight: normal;
-    text-align: center;
+    font-family: 'Playfair Display', serif;
     max-width: 700px;
     margin: 0 auto;
-    font-family: 'Playfair Display', serif;
 }
 
+/* Grid de tres columnas */
 .hero-grid {
-    /*columnas del hero*/
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
     gap: 1rem;
@@ -182,14 +167,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
-    background: #250902;
-    width: 100%;
-    box-sizing: border-box;
 }
 
+/* Columnas del hero */
 .hero-col-left {
-    /*Columna izquierda*/
-    grid-column: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -198,82 +179,67 @@ body {
     min-width: 0;
 }
 
-.hero-col-center {
-    /*columna central*/
-    grid-column: 2;
+.hero-col-center,
+.hero-col-right {
     min-width: 0;
 }
 
 .hero-col-right {
-    /*columna derecha*/
-    grid-column: 3;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    min-width: 0;
 }
 
+/* Imágenes del hero */
 .hero img {
-    /*imagenes del hero*/
     width: 100%;
     object-fit: cover;
     display: block;
 }
 
 .hero-col-left img {
-    /*dimensiones imagen izquierda*/
     height: 312px;
-    width: 100%;
 }
 
 .hero-col-center img {
-    /*dimensiones imagen central*/
     height: 426px;
-    width: 100%;
 }
 
 .hero-col-right img {
-    /*dimensiones imagen derecha*/
     height: 312px;
-    width: 100%;
 }
 
 .hero p {
-    /*parrafos del hero*/
-    font-size: 0.90rem;
+    font-size: 0.9rem;
     line-height: 1.7;
     text-align: justify;
-    margin: 0;
-    font-family: inherit;
 }
 
+/* Enlace al formulario */
 .hero h3 {
-    /*Boton organizar boda*/
     font-size: 1rem;
-    grid-column: 3;
-    padding-top: 2%;
-    text-align: right;
     font-weight: normal;
+    text-align: right;
+    padding-top: 2%;
 }
 
 .hero h3 a {
-    /*eliminar decoracion h3*/
     color: inherit;
     text-decoration: none;
 }
 
-/*Media query*/
+/* ── Responsive: móvil ── */
 @media (max-width: 700px) {
 
     html {
         overscroll-behavior: auto;
     }
 
+    /* Inicio en una sola columna */
     #home {
         grid-template-columns: 1fr;
         text-align: center;
         padding: 8rem 2rem 3rem;
-        align-items: center;
     }
 
     #home h1 {
@@ -281,7 +247,8 @@ body {
         font-size: 2.8rem;
     }
 
-    .home-eyebrow {
+    .home-eyebrow,
+    #home p {
         transform: none;
         text-align: center;
     }
@@ -292,17 +259,10 @@ body {
         font-size: 1.6rem;
     }
 
-    #home p {
-        transform: none;
-        text-align: center;
-    }
-
     #home hr {
-        transform: translateY(1rem);
-        margin-bottom: 3rem;
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto 3rem;
+        transform: translateY(1rem);
     }
 
     #home button {
@@ -311,16 +271,17 @@ body {
         display: block;
     }
 
+    .home-img-wrapper {
+        transform: none;
+    }
+
     .home-img-arch {
         width: 100%;
         height: 400px;
         border-radius: 5%;
     }
 
-    .home-img-wrapper {
-        transform: none;
-    }
-
+    /* Hero en una sola columna */
     .hero h2 {
         max-width: 390px;
     }
@@ -337,30 +298,16 @@ body {
 
     .hero-col-left {
         padding-top: 10%;
-        grid-column: 1;
-        grid-row: auto;
     }
 
-    .hero-col-center {
-        grid-column: 1;
-        grid-row: auto;
-    }
-
-    .hero-col-right {
-        grid-column: 1;
-        grid-row: auto;
-    }
-
-    .hero h3 {
-        grid-column: 1;
-        grid-row: auto;
-        text-align: right;
-    }
-
+    /* Todas las imágenes a la misma altura en móvil */
     .hero-col-left img,
     .hero-col-center img,
     .hero-col-right img {
         height: 400px;
-        width: 100%;
+    }
+
+    .hero h3 {
+        text-align: right;
     }
 }

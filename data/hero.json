@@ -4,18 +4,18 @@
     "columns": [
         {
             "type": "text-image",
-            "image": "resources/images/ejemplo1.jpg",
+            "image": "resources/images/inicio1.png",
             "alt": "Ejemplo #1",
             "text": "Your dream wedding starts here. EverAfter is designed to help you plan every detail with ease, from choosing the perfect decoration to organizing every special moment"
         },
         {
             "type": "image-only",
-            "image": "resources/images/ejemplo2.jpg",
+            "image": "resources/images/inicio2.png",
             "alt": "Ejemplo #2"
         },
         {
             "type": "image-text",
-            "image": "resources/images/ejemplo3.jpg",
+            "image": "resources/images/inicio3.jpg",
             "alt": "Ejemplo #3",
             "text": "Every love story is unique, and your wedding should reflect that. With EverAfter, you have everything you need in one place to create a day that you and your guests will remember forever"
         }

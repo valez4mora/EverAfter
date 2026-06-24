@@ -92,7 +92,7 @@ function mostrarDetalle(id) {
 
 function inicializarHeaderSolido() {
     const esIndex = window.location.pathname.endsWith('index.html') ||
-                    window.location.pathname.endsWith('/');
+        window.location.pathname.endsWith('/');
 
     if (!esIndex) {
         header.classList.add('hero-color');

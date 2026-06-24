@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:wght@300;400;600&display=swap');
 
-/* ===== RESET ===== */
-*, *::before, *::after {
+/* ── Reset global ── */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -12,19 +14,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ── Base del documento ── */
 body {
   background: #250902;
   color: #fff;
   font-family: 'Cormorant Garamond', serif;
 }
 
-/* ===== NAV ===== */
+/* ── Navegación ── */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
-  border-bottom: 0.5px solid rgba(255,255,255,0.1);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-logo {
@@ -42,7 +45,7 @@ body {
   font-size: 0.68rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
 
@@ -50,14 +53,14 @@ body {
   color: #fff;
 }
 
-/* ===== HERO ===== */
+/* ── Hero: dos columnas (texto | countdown) ── */
 .hero {
   padding: 3.5rem 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
-  border-bottom: 0.5px solid rgba(255,255,255,0.1);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-left {
@@ -70,7 +73,7 @@ body {
   font-size: 0.65rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .hero-names {
@@ -79,18 +82,17 @@ body {
   font-weight: 400;
   font-style: italic;
   line-height: 1.05;
-  color: #fff;
 }
 
 .hero-tagline {
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.38);
+  color: rgba(255, 255, 255, 0.38);
   letter-spacing: 0.06em;
   line-height: 1.7;
   max-width: 320px;
 }
 
-/* ===== COUNTDOWN ===== */
+/* ── Countdown ── */
 .hero-right {
   display: flex;
   flex-direction: column;
@@ -101,7 +103,7 @@ body {
   font-size: 0.62rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .countdown {
@@ -111,8 +113,8 @@ body {
 }
 
 .c-box {
-  background: rgba(255,255,255,0.04);
-  border: 0.5px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 1rem 0.5rem;
   text-align: center;
@@ -123,33 +125,32 @@ body {
   font-size: 1.9rem;
   font-weight: 400;
   line-height: 1;
-  color: #fff;
 }
 
 .c-lbl {
   font-size: 0.58rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
   margin-top: 5px;
 }
 
 .c-date-line {
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255, 255, 255, 0.25);
   letter-spacing: 0.08em;
 }
 
-/* ===== PERSONAL NOTE ===== */
+/* ── Nota personal ── */
 .personal {
   margin: 2rem 3rem;
-  border: 0.5px solid rgba(255,255,255,0.08);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .personal h4 {
@@ -162,7 +163,7 @@ body {
 
 .personal p {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.38);
+  color: rgba(255, 255, 255, 0.38);
   line-height: 1.7;
   max-width: 420px;
 }
@@ -172,7 +173,7 @@ body {
   opacity: 0.4;
 }
 
-/* ===== SERVICES ===== */
+/* ── Servicios ── */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -190,17 +191,17 @@ body {
   font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
   gap: 12px;
   padding: 0 3rem 3rem;
 }
 
+/* Tarjeta de servicio */
 .s-card {
   background: #3a1a10;
   border-radius: 10px;
@@ -215,12 +216,14 @@ body {
 
 .s-img {
   aspect-ratio: 16/9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: rgba(255,255,255,0.06);
-  background: #4a2015;
+  background: #e9e5e4;
+}
+
+.s-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .s-body {
@@ -231,7 +234,7 @@ body {
   font-size: 0.6rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(192,133,90,0.8);
+  color: rgba(252, 206, 198, 0.8);
   margin-bottom: 0.3rem;
 }
 
@@ -244,7 +247,7 @@ body {
 
 .s-desc {
   font-size: 0.76rem;
-  color: rgba(255,255,255,0.38);
+  color: rgba(255, 255, 255, 0.38);
   line-height: 1.6;
 }
 
@@ -256,27 +259,19 @@ body {
   font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  border-bottom: 0.5px solid rgba(255,255,255,0.18);
+  color: rgba(255, 255, 255, 0.45);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.18);
   padding-bottom: 2px;
   text-decoration: none;
-}
-
-.s-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
 }
 
 .s-link:hover {
   color: #fff;
 }
 
-/* ===== RESPONSIVE ===== (está en progreso)*/
+/* ── Responsive: tablet ── */
 @media (max-width: 768px) {
 
-  /* NAV */
   .nav {
     padding: 1rem 1.5rem;
   }
@@ -285,7 +280,6 @@ body {
     gap: 1.2rem;
   }
 
-  /* HERO */
   .hero {
     grid-template-columns: 1fr;
     padding: 2rem 1.5rem;
@@ -301,16 +295,10 @@ body {
   }
 
   .hero-right {
-    border-top: 0.5px solid rgba(255,255,255,0.08);
+    border-top: 0.5px solid rgba(255, 255, 255, 0.08);
     padding-top: 2rem;
   }
 
-  /* COUNTDOWN */
-  .countdown {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* PERSONAL */
   .personal {
     margin: 1.5rem;
     flex-direction: column;
@@ -322,7 +310,6 @@ body {
     max-width: 100%;
   }
 
-  /* SERVICES */
   .section-header {
     padding: 1.5rem 1.5rem 1rem;
     flex-direction: column;
@@ -335,10 +322,12 @@ body {
   }
 }
 
+/* ── Responsive: móvil ── */
 @media (max-width: 480px) {
 
+  /* reemplazar con menú hamburguesa */
   .nav-links {
-    display: none; /* se me hace que esto no funciona */
+    display: none;
   }
 
   .hero-names {

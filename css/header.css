@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:wght@300;400;600&display=swap');
 
-/* header */
-
+/* ── Header fijo ── */
 #main-header {
     position: fixed;
     top: 0;
@@ -10,21 +9,21 @@
     height: 4rem;
     z-index: 1000;
     background: rgba(37, 9, 2, 0.4);
-    transition: 0.3s;
-    opacity: 1;
     font-family: 'Playfair Display', serif;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 3rem;
-    border-bottom: 1px solid #f5efe68d;
+    border-bottom: 1px solid rgba(245, 239, 230, 0.55);
+    transition: background 0.3s;
 }
 
+/* Estado sólido al hacer scroll fuera del hero */
 #main-header.hero-color {
     background: #250902;
 }
 
+/* ── Logo ── */
 .logo {
     cursor: pointer;
     font-weight: normal;
@@ -35,6 +34,7 @@
     white-space: nowrap;
 }
 
+/* ── Botón hamburguesa (solo móvil) ── */
 #btnNav {
     display: none;
     background: none;
@@ -47,9 +47,10 @@
     height: 40px;
 }
 
+/* ── Navegación desktop ── */
 #main-header nav {
     height: 100%;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 #main-header nav ul {
@@ -68,25 +69,22 @@
 }
 
 #main-header nav a {
-    font-family: 'Playfair Display', serif;
     font-size: 0.68rem;
     letter-spacing: 0.15em;
+    text-transform: uppercase;
     text-decoration: none;
     color: rgba(245, 239, 230, 0.75);
     font-weight: normal;
     transition: color 0.3s;
-    text-transform: uppercase 
 }
 
 #main-header nav a:hover {
     color: #F5EFE6;
 }
 
-/* "Let's Start" con borde, distinto del resto de links */
-#main-header nav ul .nav-start a {
+/* Botón "Let's Start" con borde */
+#main-header nav .nav-start a {
     color: #F5EFE6;
-    font-size: 0.68rem;
-    letter-spacing: 0.15em;
     border: 1px solid rgba(245, 239, 230, 0.4);
     border-radius: 2px;
     padding: 0.4rem 1.1rem;
@@ -96,16 +94,16 @@
 #main-header nav .nav-start a:hover {
     border-color: rgba(245, 239, 230, 0.8);
     background: rgba(245, 239, 230, 0.06);
-    color: #F5EFE6;
 }
 
-/*media querys*/
-
+/* ── Responsive: móvil ── */
 @media (max-width: 700px) {
+
     #main-header {
         padding: 0 1.5rem;
     }
 
+    /* Hamburguesa visible, logo centrado */
     #btnNav {
         display: block;
         order: -1;
@@ -117,20 +115,23 @@
         font-size: 2rem;
     }
 
+    /* Menú desplegable oculto por defecto */
     #main-header nav {
         display: none;
         position: absolute;
-        height: auto;
         top: 4rem;
         left: 0;
         width: 100%;
+        height: auto;
         background: rgba(37, 9, 2, 0.4);
     }
 
+    /* Fondo sólido cuando el header ya tiene hero-color */
     #main-header.hero-color nav {
         background: #250902;
     }
 
+    /* Menú visible al activarse */
     #main-header nav.activo {
         display: block;
     }
@@ -153,6 +154,7 @@
         padding: 0.8rem 0 0.8rem 20px;
     }
 
+    /* "Let's Start" con margen lateral en móvil */
     #main-header nav .nav-start a {
         margin: 0.5rem 20px;
         width: calc(100% - 40px);
