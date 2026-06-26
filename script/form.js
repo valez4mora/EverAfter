@@ -46,19 +46,19 @@ function actualizarEstructura(numero) {
 }
 
 function manejarClickCard(paqueteId) {
-    paqueteSeleccionado = paqueteId;
+    if (paqueteSeleccionado === paqueteId) {
+        paqueteSeleccionado = null;
+    } else {
+        paqueteSeleccionado = paqueteId;
+        invitadosPorPaquete = {};
+        invitadosPorPaquete[paqueteId] = 1;
+    }
+
     renderPackagePicker();
 }
 
 function manejarClickNext() {
-    const mensajeError = document.getElementById('step2-error');
-
-    if (!paqueteSeleccionado) {
-        mensajeError.textContent = 'Please select a package to continue.';
-        return;
-    }
-
-    mensajeError.textContent = '';
+    if (!validarStep2()) return;
     irAlPaso(3);
 }
 
@@ -87,8 +87,15 @@ function crearMiniCard(paquete) {
     const card = document.createElement('li');
     card.className = 'mini-package-card';
 
-    if (paqueteSeleccionado === paquete.id) {
+    const estaSeleccionada = paqueteSeleccionado === paquete.id;
+    const hayOtraSeleccionada = paqueteSeleccionado !== null && !estaSeleccionada;
+
+    if (estaSeleccionada) {
         card.classList.add('selected');
+    }
+
+    if (hayOtraSeleccionada) {
+        card.classList.add('disabled');
     }
 
     const invitadosActuales = invitadosPorPaquete[paquete.id] || paquete.invitados || 1;
@@ -112,6 +119,7 @@ function crearMiniCard(paquete) {
             min="1"
             max="${paquete.maxInvitados}"
             value="${invitadosActuales}"
+            ${hayOtraSeleccionada ? 'disabled' : ''}
         >
     `;
 
@@ -190,18 +198,71 @@ function renderSummary() {
 function manejarSubmitForm(e) {
     e.preventDefault();
 
-    const reserva = {
-        nombre1: document.getElementById('name1').value,
-        nombre2: document.getElementById('name2').value,
-        fecha: document.getElementById('date').value,
-        paqueteId: paqueteSeleccionado,
-        invitados: invitadosPorPaquete[paqueteSeleccionado] || 1,
-        fechaEnvio: new Date().toISOString()
-    };
+    Swal.fire({
+        icon: "question",
+        title: "Are you sure?",
+        text: "Please confirm your wedding details are correct before submitting.",
+        showCancelButton: true,
+        cancelButtonText: "Go back",
+        confirmButtonText: "Yes, submit",
+        background: "#250902",
+        color: "#F5EFE6",
+        customClass: {
+            popup: 'swal-everafter-popup',
+            title: 'swal-everafter-title',
+            confirmButton: 'swal-everafter-btn',
+            cancelButton: 'swal-everafter-btn-cancel'
+        }
+    }).then(function (result) {
+        if (!result.isConfirmed) {
+            return;
+        }
 
-    localStorage.setItem('reservaActual', JSON.stringify(reserva));
+        const reserva = {
+            nombre1: document.getElementById('name1').value,
+            nombre2: document.getElementById('name2').value,
+            fecha: document.getElementById('date').value,
+            paqueteId: paqueteSeleccionado,
+            invitados: invitadosPorPaquete[paqueteSeleccionado] || 1,
+            fechaEnvio: new Date().toISOString()
+        };
 
-    irAlPaso(4);
+        localStorage.setItem('reservaActual', JSON.stringify(reserva));
+
+        irAlPaso(4);
+    });
+}
+
+function eliminarReserva() {
+    Swal.fire({
+        icon: "warning",
+        title: "Delete this booking?",
+        text: "This will permanently remove your wedding details. This cannot be undone.",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete",
+        cancelButtonText: "Cancel",
+        background: "#250902",
+        color: "#F5EFE6",
+        customClass: {
+            popup: 'swal-everafter-popup',
+            title: 'swal-everafter-title',
+            confirmButton: 'swal-everafter-btn',
+            cancelButton: 'swal-everafter-btn-cancel'
+        }
+    }).then(function (result) {
+        if (!result.isConfirmed) {
+            return;
+        }
+
+        localStorage.removeItem('reservaActual');
+
+        paqueteSeleccionado = null;
+        invitadosPorPaquete = {};
+
+        document.getElementById('weddingForm').reset();
+
+        irAlPaso(1);
+    });
 }
 
 function renderConfirmation() {
@@ -237,6 +298,7 @@ function renderConfirmation() {
                 <p><strong>Guests:</strong> ${reserva.invitados} / ${paquete.maxInvitados}</p>
                 <p><strong>Total price:</strong> $${precioFinal}</p>
                 <button type="button" class="edit-btn" onclick="editarReserva()">Edit</button>
+                <button type="button" class="edit-btn delete-btn" onclick="eliminarReserva()">Delete</button>
                 <button type="button" class="edit-btn" onclick="window.location.href='menu.html'">Continue</button>
             </article>
         </div>

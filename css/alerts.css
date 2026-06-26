@@ -1,0 +1,55 @@
+.swal-everafter-popup {
+    border-radius: 6px;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.swal-everafter-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: normal;
+    color: #F5EFE6;
+}
+
+.swal-everafter-btn {
+    background: transparent !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.35) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    padding: 0.65rem 1.5rem !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    border-radius: 2px !important;
+    font-family: inherit !important;
+    box-shadow: none !important;
+}
+
+.swal-everafter-btn:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.swal-everafter-btn-cancel {
+    background: transparent !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    padding: 0.65rem 1.5rem !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    border-radius: 2px !important;
+    font-family: inherit !important;
+    box-shadow: none !important;
+    margin-right: 0.8rem !important;
+}
+
+.swal-everafter-btn-cancel:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.swal-everafter-btn {
+    order: 2;
+}
+
+.swal-everafter-btn-cancel {
+    order: 1;
+}

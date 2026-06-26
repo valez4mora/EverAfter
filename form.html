@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/alerts.css">
     <title>EverAfter | Start Your Journey</title>
 </head>
 
@@ -51,7 +52,7 @@
                         <input type="date" id="date" name="date" required>
 
                         <div class="step-actions">
-                            <button type="button" class="form-btn" onclick="irAlPaso(2)">Next →</button>
+                            <button type="button" class="form-btn" onclick="if(validarStep1()) irAlPaso(2)">Next →</button>
                         </div>
                     </section>
 
@@ -60,7 +61,7 @@
                         <p class="picker-text">Pick the package that fits your dream wedding.</p>
 
                         <ul id="package-picker"></ul>
-                        <p id="step2-error" class="form-error"></p>
+                        
                         <div class="step-actions">
                             <button type="button" class="form-btn form-btn-back" onclick="irAlPaso(1)">← Back</button>
                             <button type="button" class="form-btn" id="btnNextStep2">Next →</button>
@@ -115,6 +116,9 @@
     <script src="script/dataLoader.js"></script>
     <script src="script/shared.js"></script>
     <script src="script/form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script/validation.js"></script>
+    
 </body>
 
 </html>
