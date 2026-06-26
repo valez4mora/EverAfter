@@ -1,5 +1,5 @@
 function cargarHero() {
-    const heroSection = document.querySelector('.hero');
+    const heroSection = document.getElementById('hero');
 
     if (!heroSection) return;
 

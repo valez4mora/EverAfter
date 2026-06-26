@@ -416,6 +416,11 @@ body {
     display: none !important;
 }
 
+.column {
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
 /* ── Mosaico de fotos (columna derecha) ── */
 .mosaic-right {
     display: grid;

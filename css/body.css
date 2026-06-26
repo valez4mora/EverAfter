@@ -136,20 +136,20 @@ body {
 }
 
 /* ── Sección hero: galería de tres columnas ── */
-.hero {
+#hero {
     text-align: center;
     border-top: 1px solid #F5EFE6;
     border-bottom: 1px solid #F5EFE6;
     color: #F5EFE6;
 }
 
-.hero h1 {
+#hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
     padding-top: 5%;
 }
 
-.hero h2 {
+#hero h2 {
     padding-top: 3%;
     font-size: 0.85rem;
     font-weight: normal;
@@ -157,6 +157,22 @@ body {
     max-width: 700px;
     margin: 0 auto;
 }
+
+#hero h3 {
+    /*Boton organizar boda*/
+    font-size: 1rem;
+    grid-column: 3;
+    padding-top: 2%;
+    text-align: right;
+    font-weight: normal;
+}
+
+#hero h3 a {
+    /*eliminar decoracion h3*/
+    color: inherit;
+    text-decoration: none;
+}
+
 
 /* Grid de tres columnas */
 .hero-grid {
@@ -191,7 +207,7 @@ body {
 }
 
 /* Imágenes del hero */
-.hero img {
+#hero img {
     width: 100%;
     object-fit: cover;
     display: block;
@@ -209,24 +225,13 @@ body {
     height: 312px;
 }
 
-.hero p {
+#hero p {
     font-size: 0.9rem;
     line-height: 1.7;
     text-align: justify;
 }
 
-/* Enlace al formulario */
-.hero h3 {
-    font-size: 1rem;
-    font-weight: normal;
-    text-align: right;
-    padding-top: 2%;
-}
 
-.hero h3 a {
-    color: inherit;
-    text-decoration: none;
-}
 
 /* ── Responsive: móvil ── */
 @media (max-width: 700px) {
