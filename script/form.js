@@ -299,7 +299,7 @@ function renderConfirmation() {
                 <p><strong>Total price:</strong> $${precioFinal}</p>
                 <button type="button" class="edit-btn" onclick="editarReserva()">Edit</button>
                 <button type="button" class="edit-btn delete-btn" onclick="eliminarReserva()">Delete</button>
-                <button type="button" class="edit-btn" onclick="window.location.href='menu.html'">Continue</button>
+                <button type="button" class="edit-btn" onclick="window.location.href='menu.html'">Continue &#8594;</button>
             </article>
         </div>
 

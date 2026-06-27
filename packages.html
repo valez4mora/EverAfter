@@ -20,31 +20,34 @@
     <h1 class="titulo logo"> EverAfter </h1>
     <nav id="navMenu">
       <ul>
-        <li><a href="menu.html">Home</a></li>
-        <li><a href="checklist.html">Checklist</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#hero">About</a></li>
         <li><a href="#main-footer">Contact</a></li>
+        <li class="nav-start"><a href="packages.html">Wedding Packages</a></li>
+        <li class="nav-start"><a href="checklist.html">Checklist</a></li>
+        <li class="nav-start"><a href="form.html">Your Wedding</a></li>
       </ul>
     </nav>
   </header>
-
-  <section class="search-wrap">
-    <p>Search</p>
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Example: Luxury">
-      <button onclick="clearSearch()">✕</button>
-
-      <select id="filterCategory">
-        <option value="all">All Categories</option>
-        <option value="Classic">Classic</option>
-        <option value="Premium">Premium</option>
-        <option value="Outdoor">Outdoor</option>
-        <option value="Beach">Beach</option>
-        <option value="Favorites">Favorites</option>
-      </select>
-    </div>
-  </section>
-
   <main>
+    <section class="search-wrap">
+      <p>Search</p>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Example: Luxury">
+        <button onclick="clearSearch()">✕</button>
+
+        <select id="filterCategory">
+          <option value="all">All Categories</option>
+          <option value="Classic">Classic</option>
+          <option value="Premium">Premium</option>
+          <option value="Outdoor">Outdoor</option>
+          <option value="Beach">Beach</option>
+          <option value="Favorites">Favorites</option>
+        </select>
+      </div>
+    </section>
+
+
     <section id="packages">
       <section id="packages-container"></section>
 

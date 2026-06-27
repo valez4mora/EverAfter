@@ -26,6 +26,12 @@ function cargarHero() {
 async function inicializarIndex() {
     await cargarDatos();
     cargarHero();
+    if (window.location.hash === '#hero') {
+        const heroSection = document.querySelector('#hero');
+        if (heroSection) {
+            heroSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', inicializarIndex);

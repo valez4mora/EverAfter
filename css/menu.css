@@ -21,46 +21,17 @@ body {
   font-family: 'Cormorant Garamond', serif;
 }
 
-/* ── Navegación ── */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 3rem;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
-}
-
-.nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  font-style: italic;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links a {
-  font-size: 0.68rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  color: #fff;
-}
 
 /* ── Hero: dos columnas (texto | countdown) ── */
 .hero {
+  margin-top: 3rem;
   padding: 3.5rem 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+
 }
 
 .hero-left {
@@ -199,6 +170,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   padding: 0 3rem 3rem;
+  border-bottom: 1px solid #F5EFE6;
 }
 
 /* Tarjeta de servicio */
