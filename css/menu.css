@@ -44,7 +44,7 @@ body {
   font-size: 0.65rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.774);
 }
 
 .hero-names {
@@ -57,7 +57,7 @@ body {
 
 .hero-tagline {
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.774);
   letter-spacing: 0.06em;
   line-height: 1.7;
   max-width: 320px;
@@ -71,10 +71,10 @@ body {
 }
 
 .countdown-label {
-  font-size: 0.62rem;
+  font-size: 0.70rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.774);
 }
 
 .countdown {
@@ -102,13 +102,13 @@ body {
   font-size: 0.58rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.788);
   margin-top: 5px;
 }
 
 .c-date-line {
-  font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.774);
   letter-spacing: 0.08em;
 }
 
@@ -133,8 +133,8 @@ body {
 }
 
 .personal p {
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.38);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.774);
   line-height: 1.7;
   max-width: 420px;
 }
@@ -162,12 +162,12 @@ body {
   font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.774);
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   padding: 0 3rem 3rem;
   border-bottom: 1px solid #F5EFE6;
