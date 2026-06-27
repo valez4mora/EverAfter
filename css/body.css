@@ -287,7 +287,7 @@ body {
     }
 
     /* Hero en una sola columna */
-    .hero h2 {
+    #hero h2 {
         max-width: 390px;
     }
 
@@ -297,22 +297,30 @@ body {
         overflow: hidden;
     }
 
-    .hero p {
+    #hero p {
         font-size: 1rem;
     }
 
-    .hero-col-left {
-        padding-top: 10%;
+    .hero-col-left,
+    .hero-col-right {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 0;
     }
 
-    /* Todas las imágenes a la misma altura en móvil */
+    .hero-col-center {
+        width: 100%;
+    }
+
     .hero-col-left img,
     .hero-col-center img,
     .hero-col-right img {
-        height: 400px;
+        width: 100%;
+        height: 250px;
     }
 
-    .hero h3 {
-        text-align: right;
+    #hero h3 {
+        grid-column: 1;
+        text-align: center;
     }
 }
