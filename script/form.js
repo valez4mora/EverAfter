@@ -23,6 +23,7 @@ function irAlPaso(numero) {
     }
 
     actualizarEstructura(numero);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function actualizarEstructura(numero) {
@@ -205,7 +206,7 @@ function manejarSubmitForm(e) {
         showCancelButton: true,
         cancelButtonText: "Go back",
         confirmButtonText: "Yes, submit",
-        background: "#250902",
+        background: "#2e1a0e",
         color: "#F5EFE6",
         customClass: {
             popup: 'swal-everafter-popup',
@@ -241,7 +242,7 @@ function eliminarReserva() {
         showCancelButton: true,
         confirmButtonText: "Yes, delete",
         cancelButtonText: "Cancel",
-        background: "#250902",
+        background: "#2e1a0e",
         color: "#F5EFE6",
         customClass: {
             popup: 'swal-everafter-popup',
@@ -297,9 +298,9 @@ function renderConfirmation() {
                 </div>
                 <p><strong>Guests:</strong> ${reserva.invitados} / ${paquete.maxInvitados}</p>
                 <p><strong>Total price:</strong> $${precioFinal}</p>
-                <button type="button" class="edit-btn" onclick="editarReserva()">Edit</button>
-                <button type="button" class="edit-btn delete-btn" onclick="eliminarReserva()">Delete</button>
-                <button type="button" class="edit-btn" onclick="window.location.href='menu.html'">Continue &#8594;</button>
+                <button type="button" class="js-btn" onclick="editarReserva()">Edit</button>
+                <button type="button" class="js-btn " onclick="eliminarReserva()">Delete</button>
+                <button type="button" class="js-btn" onclick="window.location.href='menu.html'">Continue &#8594;</button>
             </article>
         </div>
 
