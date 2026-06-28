@@ -587,7 +587,7 @@ body {
         width: 100%;
     }
 
-    .summary-block{
+    .summary-block {
         max-width: 360px;
         width: 100%;
     }
@@ -606,10 +606,12 @@ body {
         padding: 0 1rem;
         box-sizing: border-box;
     }
+
     .form-btn {
-    padding: 0.65rem 1.3rem;
-    
-}
+        padding: 0.65rem 1rem;
+
+    }
+
     .js-btn {
         display: none;
     }
