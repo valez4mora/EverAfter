@@ -30,22 +30,33 @@ function validarFecha(valorFecha) {
 
 //validar los campos del step 1
 function validarStep1() {
-    const nombre1 = document.getElementById('name1').value;
-    const nombre2 = document.getElementById('name2').value;
-    const fecha = document.getElementById('date').value;
+    const inputNombre1 = document.getElementById('name1');
+    const inputNombre2 = document.getElementById('name2');
+    const inputFecha = document.getElementById('date');
 
-    if (!validarNombre(nombre1) || !validarNombre(nombre2)) {
-        mostrarError('Missing names', 'Please enter both partner names.');
+    const nombre1 = inputNombre1.value;
+    const nombre2 = inputNombre2.value;
+    const fecha = inputFecha.value;
+
+    if (!validarNombre(nombre1)) {
+        // Le pasamos 'inputNombre1' como tercer argumento
+        mostrarError('Missing names', 'Please enter both partner names.', inputNombre1);
+        return false;
+    }
+
+    if (!validarNombre(nombre2)) {
+        mostrarError('Missing names', 'Please enter both partner names.', inputNombre2);
         return false;
     }
 
     if (!validarFecha(fecha)) {
-        mostrarError('Invalid date', 'Please choose a valid date (today or later).');
+        mostrarError('Invalid date', 'Please choose a valid date (today or later).', inputFecha);
         return false;
     }
 
     return true;
 }
+
 //validar step 2 o seleccion de paquete
 function validarStep2() {
     if (!paqueteSeleccionado) {
@@ -57,7 +68,7 @@ function validarStep2() {
 }
 
 //mostrar el error
-function mostrarError(titulo, mensaje) {
+function mostrarError(titulo, mensaje, elementoAEnfocar = null) {
     Swal.fire({
         icon: "error",
         title: titulo,
@@ -69,6 +80,13 @@ function mostrarError(titulo, mensaje) {
             popup: 'swal-everafter-popup',
             title: 'swal-everafter-title',
             confirmButton: 'swal-everafter-btn'
+        },
+        didClose: () => {
+            if (elementoAEnfocar) {
+                setTimeout(() => {
+                    elementoAEnfocar.focus();
+                }, 100);
+            }
         }
     });
 }
