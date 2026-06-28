@@ -215,6 +215,22 @@ select option {
   max-height: 530px;
 }
 
+#package-details > h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--crema);
+    margin-bottom: 0.5rem;
+}
+
+#package-details > p {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(245, 239, 230, 0.65);
+    line-height: 1.6;
+}
+
 .details-card {
   background: var(--fondo-card);
   border: 0.5px solid var(--borde);
