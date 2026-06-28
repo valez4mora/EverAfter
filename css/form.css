@@ -28,7 +28,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     min-height: 100vh;
-    border-bottom: 1px solid #F5EFE6;
 }
 
 /* -- Columna izquierda: título + formulario -- */
@@ -528,6 +527,7 @@ body {
 @media (max-width: 700px) {
     html {
         overscroll-behavior: auto;
+        align-items: stretch;
     }
 
     .mosaic-section {
@@ -584,19 +584,32 @@ body {
 
     #confirmation-container {
         grid-template-columns: 1fr;
+        width: 100%;
     }
-    .details-card{
+
+    .summary-block{
+        max-width: 360px;
+        width: 100%;
+    }
+
+    .details-card {
         max-width: 320px;
         width: 100%;
     }
+
     .step-actions {
         display: flex !important;
+        flex-wrap: nowrap;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
         margin-top: 1.5rem;
-        padding: auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
     }
-
+    .form-btn {
+    padding: 0.65rem 1.3rem;
+    
+}
     .js-btn {
         display: none;
     }
