@@ -75,7 +75,7 @@ main {
 }
 
 .progress-fill {
-    background: rgba(182, 101, 101, 0.801);
+    background: #c75f5fb2;
     border-radius: 99px;
     height: 3px;
     width: 0%;
