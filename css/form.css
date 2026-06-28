@@ -321,16 +321,17 @@ body {
 .summary-block-header h3 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-weight: normal;
-    font-size: 1.15rem;
+    font-weight: 400;
+    font-size: 1.5rem;
     color: #F5EFE6;
-    margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
 }
 
 .summary-block p {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    margin-bottom: 1rem;
 }
 
 .summary-block p strong {

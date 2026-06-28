@@ -201,13 +201,14 @@ function manejarSubmitForm(e) {
 
     Swal.fire({
         icon: "question",
+        iconColor: "#053010",
         title: "Are you sure?",
         text: "Please confirm your wedding details are correct before submitting.",
         showCancelButton: true,
         cancelButtonText: "Go back",
         confirmButtonText: "Yes, submit",
-        background: "#2e1a0e",
-        color: "#F5EFE6",
+        background: "#ffffffea",
+        color: "#250902",
         customClass: {
             popup: 'swal-everafter-popup',
             title: 'swal-everafter-title',
@@ -237,13 +238,14 @@ function manejarSubmitForm(e) {
 function eliminarReserva() {
     Swal.fire({
         icon: "warning",
+        iconColor: "#66120c",
         title: "Delete this booking?",
         text: "This will permanently remove your wedding details. This cannot be undone.",
         showCancelButton: true,
         confirmButtonText: "Yes, delete",
         cancelButtonText: "Cancel",
-        background: "#2e1a0e",
-        color: "#F5EFE6",
+        background: "#ffffffea",
+        color: "#250902",
         customClass: {
             popup: 'swal-everafter-popup',
             title: 'swal-everafter-title',

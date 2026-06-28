@@ -62,8 +62,8 @@ function mostrarError(titulo, mensaje) {
         icon: "error",
         title: titulo,
         text: mensaje,
-        background: "#250902",
-        color: "#F5EFE6",
+        background: "#ffffffea",
+        color: "#250902",
         confirmButtonColor: "transparent",
         customClass: {
             popup: 'swal-everafter-popup',

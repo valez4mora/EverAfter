@@ -52,4 +52,23 @@
 
 .swal-everafter-btn-cancel {
     order: 1;
+    color: #250902 !important;
+    border-color: #250902 !important;
+}
+
+.swal-everafter-popup {
+    color: #250902 !important;
+}
+
+.swal-everafter-title {
+    color: #250902 !important;
+}
+
+.swal2-html-container {
+    color: #250902 !important;
+}
+
+.swal-everafter-btn {
+    color: #250902 !important;
+    border-color: #250902 !important;
 }
