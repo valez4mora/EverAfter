@@ -51,18 +51,26 @@ function mostrarDetalle(id) {
     const detalle =
         document.getElementById("package-details");
 
+    const esMobile = window.innerWidth <= 700;
+
+    const contenedorListaExiste = document.getElementById('packages-container') !== null;
+    const botonVolver = (esMobile && contenedorListaExiste)
+        ? `<button class="back-to-list" onclick="volverALaLista()">← Back to list</button>`
+        : '';
+
     detalle.innerHTML = `
-        <section class = "details-card">
+        ${botonVolver}
+        <section class="details-card">
         <img
             src="${paquete.imagen}"
             alt="${paquete.nombre}"
             class="package-image">
         <h2>${paquete.nombre}</h2>
 
-        <p class = "description">${paquete.descripcion}</p>
+        <p class="description">${paquete.descripcion}</p>
 
         <p class="details-location">${paquete.lugar}</p>
-        
+
         <p>Services:</p>
         <ul>
             ${paquete.incluye
@@ -87,7 +95,22 @@ function mostrarDetalle(id) {
 
         </section>
     `;
+
+    if (esMobile) {
+        const contenedorLista = document.getElementById('packages-container');
+        if (contenedorLista) {
+            contenedorLista.classList.add('detail-open');
+            detalle.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
     return detalle;
+}
+
+function volverALaLista() {
+    document.getElementById('packages-container').classList.remove('detail-open');
+    document.getElementById('package-details').classList.remove('active');
 }
 
 function inicializarHeaderSolido() {

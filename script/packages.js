@@ -172,5 +172,22 @@ async function inicializarPaquetesPage() {
     cargarFavorites();
     inicializarPaquetes();
 }
+function actualizarVistaPackages() {
+    const esMobile = window.innerWidth <= 700;
+    const contenedor = document.getElementById('packages-container');
+    const detalle = document.getElementById('package-details');
+
+    if (!contenedor || !detalle) return;
+
+    if (!esMobile) {
+        contenedor.classList.remove('detail-open');
+        detalle.classList.remove('active');
+
+        const boton = detalle.querySelector('.back-to-list');
+        if (boton) boton.remove();
+    }
+}
+
+window.addEventListener('resize', actualizarVistaPackages);
 
 document.addEventListener('DOMContentLoaded', inicializarPaquetesPage);

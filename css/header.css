@@ -25,13 +25,12 @@
 
 /* ── Logo ── */
 .logo {
+    cursor: default;
+}
+
+.logo-text {
     cursor: pointer;
-    font-weight: normal;
-    font-style: italic;
-    font-size: 1.5rem;
-    color: #F5EFE6;
-    margin: 0;
-    white-space: nowrap;
+    display: inline-block;
 }
 
 /* ── Botón hamburguesa (solo móvil) ── */

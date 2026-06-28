@@ -527,7 +527,6 @@ body {
 @media (max-width: 700px) {
     html {
         overscroll-behavior: auto;
-        align-items: stretch;
     }
 
     .mosaic-section {
@@ -587,11 +586,6 @@ body {
         width: 100%;
     }
 
-    .summary-block {
-        max-width: 360px;
-        width: 100%;
-    }
-
     .details-card {
         max-width: 320px;
         width: 100%;
@@ -609,7 +603,6 @@ body {
 
     .form-btn {
         padding: 0.65rem 1rem;
-
     }
 
     .js-btn {
