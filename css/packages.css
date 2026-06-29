@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Jost:wght@200;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Cormorant+Garamond:wght@300;400&display=swap');
 
-/* ── Variables de color y fondo ── */
+/* -- Variables de color y fondo -- */
 :root {
   --crema: #f5efe6;
   --beige: #e6dbc9;
@@ -13,7 +13,7 @@
   --fondo-input: #2a1208;
 }
 
-/* ── Reset global ── */
+/* -- Reset global -- */
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +25,7 @@ html {
   overscroll-behavior: none;
 }
 
-/* ── Base del documento ── */
+/* -- Base del documento -- */
 body {
   background: var(--fondo-body);
   color: var(--crema);
@@ -34,7 +34,7 @@ body {
   padding-top: 6rem;
 }
 
-/* ── Barra de búsqueda ── */
+/* -- Barra de búsqueda -- */
 .search-wrap {
   max-width: 680px;
   margin: 0 auto 2rem;
@@ -66,7 +66,7 @@ body {
   cursor: pointer;
 }
 
-/* ── Filtro de categoría ── */
+/* -- Filtro de categoría -- */
 #filterCategory {
   background: var(--fondo-input);
   color: var(--crema);
@@ -81,7 +81,7 @@ select option {
   background: var(--fondo-input);
 }
 
-/* ── Grid principal: lista + detalle ── */
+/* -- Grid principal: lista + detalle -- */
 #packages {
   max-width: 680px;
   margin: 0 auto;
@@ -90,7 +90,22 @@ select option {
   gap: 0.4rem;
 }
 
-/* ── Lista de paquetes (columna izquierda) ── */
+/* -- Lista de paquetes (columna izquierda) -- */
+.no-results-message {
+    width: 100%;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #f5efe6; 
+    font-size: 1.25rem;
+}
+
+.no-results-message p {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    font-family: inherit;
+}
+
 #packages-container {
   overflow-y: auto;
   max-height: 530px;
@@ -106,7 +121,7 @@ select option {
   border-radius: 10px;
 }
 
-/* ── Tarjeta individual ── */
+/* -- Tarjeta individual -- */
 .package-card {
   background: var(--fondo-card);
   border: 0.5px solid var(--borde);
@@ -209,7 +224,7 @@ select option {
   background: rgba(214, 205, 190, 0.08);
 }
 
-/* ── Panel de detalle (columna derecha) ── */
+/* -- Panel de detalle (columna derecha) -- */
 #package-details {
   overflow-y: auto;
   max-height: 530px;
@@ -301,7 +316,7 @@ select option {
   padding: 3px 10px;
 }
 
-/* ── Línea divisora al final de la página ── */
+/* -- Línea divisora al final de la página -- */
 hr {
   border: none;
   border-top: 0.5px solid var(--borde);
@@ -309,7 +324,7 @@ hr {
   margin-top: 3rem;
 }
 
-/* ── Responsive: móvil ── */
+/* -- Responsive: móvil -- */
 @media (max-width: 700px) {
 
     body {
