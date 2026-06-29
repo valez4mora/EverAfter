@@ -31,7 +31,16 @@
 .logo-text {
     cursor: pointer;
     display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: normal;
+    color: #F5EFE6;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    margin-bottom: 1rem;
 }
+
 
 /* ── Botón hamburguesa (solo móvil) ── */
 #btnNav {
