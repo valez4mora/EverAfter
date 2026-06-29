@@ -15,7 +15,8 @@ html {
 }
 
 /* ── Base del documento ── */
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -210,4 +211,109 @@ main {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.5);
     font-style: italic;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+    .page {
+        padding: 5rem 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .page {
+        padding: 4.5rem 1.5rem 2rem;
+    }
+
+    .page-tag {
+        font-size: 0.7rem;
+        letter-spacing: 0.18em;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .page-sub {
+        font-size: 0.95rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .progress-wrap {
+        margin-bottom: 2rem;
+    }
+
+    .add-row {
+        gap: 0.6rem;
+    }
+
+    .add-input {
+        font-size: 1rem;
+    }
+
+    .add-btn {
+        font-size: 1.6rem;
+    }
+
+    .task {
+        padding: 1rem 0;
+        gap: 0.8rem;
+    }
+
+    .task-text {
+        font-size: 1rem;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+
+    .check {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* En celular no existe hover */
+    .del-btn {
+        opacity: 1;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .page {
+        padding: 4rem 1rem 1.5rem;
+    }
+
+    .page-title {
+        font-size: 1.55rem;
+    }
+
+    .page-sub {
+        font-size: 0.9rem;
+    }
+
+    .progress-text {
+        font-size: 0.7rem;
+    }
+
+    .add-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add-btn {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid rgba(255, 255, 255, .15);
+        border-radius: 6px;
+    }
+
+    .task {
+        align-items: flex-start;
+    }
+
+    .task-text {
+        font-size: 0.95rem;
+    }
 }
