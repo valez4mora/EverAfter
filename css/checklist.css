@@ -213,58 +213,80 @@ main {
     font-style: italic;
 }
 
-/* ── Responsive ── */
+/* ===========================
+   Tablets
+=========================== */
 @media (max-width: 992px) {
     .page {
-        padding: 5rem 3rem;
+        padding: 6rem 3rem 2.5rem;
     }
 }
 
+/* ===========================
+   Celulares
+=========================== */
 @media (max-width: 768px) {
 
     .page {
-        padding: 4.5rem 1.5rem 2rem;
+        padding: 6.5rem 1.5rem 2rem;
+    }
+
+    .page-title {
+        font-size: 1.9rem;
+    }
+
+    .page-sub {
+        font-size: 0.9rem;
+    }
+
+    .task-text {
+        line-height: 1.4;
+        word-break: break-word;
+    }
+
+    /* En celulares no existe hover */
+    .del-btn {
+        opacity: 1;
+    }
+}
+
+/* ===========================
+   Celulares pequeños
+=========================== */
+@media (max-width: 480px) {
+
+    .page {
+        padding: 7rem 1rem 2rem;
     }
 
     .page-tag {
-        font-size: 0.7rem;
+        font-size: 0.55rem;
         letter-spacing: 0.18em;
     }
 
     .page-title {
-        font-size: 1.8rem;
-    }
-
-    .page-sub {
-        font-size: 0.95rem;
-        margin-bottom: 1.8rem;
-    }
-
-    .progress-wrap {
-        margin-bottom: 2rem;
-    }
-
-    .add-row {
-        gap: 0.6rem;
-    }
-
-    .add-input {
-        font-size: 1rem;
-    }
-
-    .add-btn {
         font-size: 1.6rem;
     }
 
+    .page-sub {
+        font-size: 0.85rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .progress-text {
+        font-size: 0.65rem;
+    }
+
+    .add-input {
+        font-size: 0.95rem;
+    }
+
     .task {
-        padding: 1rem 0;
-        gap: 0.8rem;
+        gap: 0.6rem;
     }
 
     .task-text {
-        font-size: 1rem;
-        line-height: 1.4;
-        word-break: break-word;
+        font-size: 0.95rem;
     }
 
     .check {
@@ -272,48 +294,8 @@ main {
         height: 18px;
     }
 
-    /* En celular no existe hover */
     .del-btn {
         opacity: 1;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .page {
-        padding: 4rem 1rem 1.5rem;
-    }
-
-    .page-title {
-        font-size: 1.55rem;
-    }
-
-    .page-sub {
-        font-size: 0.9rem;
-    }
-
-    .progress-text {
-        font-size: 0.7rem;
-    }
-
-    .add-row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .add-btn {
-        width: 100%;
-        padding: 0.7rem;
-        border: 1px solid rgba(255, 255, 255, .15);
-        border-radius: 6px;
-    }
-
-    .task {
-        align-items: flex-start;
-    }
-
-    .task-text {
         font-size: 0.95rem;
     }
 }
