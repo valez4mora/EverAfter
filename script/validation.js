@@ -56,7 +56,17 @@ function validarStep1() {
 
     return true;
 }
+const step1 = document.getElementById("step1");
 
+step1.addEventListener("keydown", function (e) { 
+    if (e.key === "Enter") {
+        e.preventDefault();
+
+        if (validarStep1()) {
+            irAlPaso(2);
+        }
+    }
+});
 //validar step 2 o seleccion de paquete
 function validarStep2() {
     if (!paqueteSeleccionado) {
