@@ -62,8 +62,8 @@ body {
 
 /* -- Formulario -- */
 .form-section p {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.45);
+    font-size: 1.1rem;
+    color: #f7e2db;
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
