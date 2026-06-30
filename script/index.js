@@ -36,13 +36,3 @@ async function inicializarIndex() {
 
 document.addEventListener('DOMContentLoaded', inicializarIndex);
 
-// Solo en index.js o donde cargue el index
-function inicioALRegistrar() {
-    const registro = localStorage.getItem("reservaActual");
-
-    if (registro) {
-        window.location.href = "menu.html";
-    }
-}
-
-document.addEventListener("DOMContentLoaded", inicioALRegistrar);
