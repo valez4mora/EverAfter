@@ -5,7 +5,7 @@ const menu = document.getElementById("navMenu");
 
 // color header al hacer scroll 
 function cambiarColorHeader() {
-    const hero = document.querySelector(".hero");
+    const hero = document.getElementById("hero");
 
     if (!hero) return;
 
