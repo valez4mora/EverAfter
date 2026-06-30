@@ -56,7 +56,7 @@ body {
 }
 
 .hero-tagline {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.774);
   letter-spacing: 0.06em;
   line-height: 1.7;
@@ -133,7 +133,7 @@ body {
 }
 
 .personal p {
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   color: rgba(255, 255, 255, 0.774);
   line-height: 1.7;
   max-width: 420px;
