@@ -21,17 +21,14 @@ function cambiarColorHeader() {
 // clic logo
 function irAlInicio() {
     const home = document.getElementById("home");
+    const enIndex = window.location.pathname.endsWith("index.html");
 
-    if (window.location.pathname.includes("budget.html")) {
+    if (!enIndex) {
         window.location.href = "index.html";
-    }
-    else if (home) {
+    } else if (home) {
         home.scrollIntoView({
             behavior: "smooth"
         });
-    }
-    else {
-        window.location.href = "index.html";
     }
 }
 
