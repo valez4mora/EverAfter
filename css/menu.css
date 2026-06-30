@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:wght@300;400;600&display=swap');
 
-/* ── Reset global ── */
+/* -- Reset global -- */
 *,
 *::before,
 *::after {
@@ -14,7 +14,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ── Base del documento ── */
+/* -- Base del documento -- */
 body {
   background: #250902;
   color: #fff;
@@ -22,7 +22,7 @@ body {
 }
 
 
-/* ── Hero: dos columnas (texto | countdown) ── */
+/* -- Hero: dos columnas (texto | countdown) -- */
 .hero {
   margin-top: 3rem;
   padding: 3.5rem 3rem;
@@ -63,7 +63,7 @@ body {
   max-width: 320px;
 }
 
-/* ── Countdown ── */
+/* -- Countdown -- */
 .hero-right {
   display: flex;
   flex-direction: column;
@@ -112,7 +112,7 @@ body {
   letter-spacing: 0.08em;
 }
 
-/* ── Nota personal ── */
+/* -- Nota personal -- */
 .personal {
   margin: 2rem 3rem;
   border: 0.5px solid rgba(255, 255, 255, 0.08);
@@ -144,7 +144,7 @@ body {
   opacity: 0.4;
 }
 
-/* ── Servicios ── */
+/* -- Servicios -- */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -241,7 +241,7 @@ body {
   color: #fff;
 }
 
-/* ── Responsive: tablet ── */
+/* -- Responsive: tablet -- */
 @media (max-width: 768px) {
 
   .nav {
@@ -294,7 +294,7 @@ body {
   }
 }
 
-/* ── Responsive: móvil ── */
+/* -- Responsive: móvil -- */
 @media (max-width: 480px) {
 
   /* reemplazar con menú hamburguesa */

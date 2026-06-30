@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:wght@300;400;600&display=swap');
 
-/* ── Header fijo ── */
+/* -- Header fijo -- */
 #main-header {
     position: fixed;
     top: 0;
@@ -23,7 +23,7 @@
     background: #250902;
 }
 
-/* ── Logo ── */
+/* -- Logo -- */
 .logo {
     cursor: default;
 }
@@ -42,7 +42,7 @@
 }
 
 
-/* ── Botón hamburguesa (solo móvil) ── */
+/* -- Botón hamburguesa (solo móvil) -- */
 #btnNav {
     display: none;
     background: none;
@@ -55,7 +55,7 @@
     height: 40px;
 }
 
-/* ── Navegación desktop ── */
+/* -- Navegación desktop -- */
 #main-header nav {
     height: 100%;
     transition: background 0.3s;
@@ -104,7 +104,7 @@
     background: rgba(245, 239, 230, 0.06);
 }
 
-/* ── Responsive: móvil ── */
+/* -- Responsive: móvil -- */
 @media (max-width: 700px) {
 
     #main-header {

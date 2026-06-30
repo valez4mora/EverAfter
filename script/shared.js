@@ -125,6 +125,7 @@ function inicializarHeaderSolido() {
 // eventos 
 window.addEventListener("scroll", cambiarColorHeader);
 
+
 logos.forEach(logo => {
     logo.addEventListener("click", irAlInicio);
 });

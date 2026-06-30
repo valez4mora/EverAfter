@@ -24,4 +24,15 @@ function inicializarMenu() {
     `;
 }
 
+// Solo en index.js o donde cargue el index
+function inicioALRegistrar() {
+    const registro = localStorage.getItem("reservaActual");
+
+    if (!registro) {
+        window.location.href = "index.html";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", inicioALRegistrar);
+
 document.addEventListener('DOMContentLoaded', inicializarMenu);

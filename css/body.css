@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Cormorant+Garamond:wght@300;400&display=swap');
 
-/* ── Reset global ── */
+/* -- Reset global -- */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ html {
     overscroll-behavior: none;
 }
 
-/* ── Base del documento ── */
+/* -- Base del documento -- */
 body {
     background: #250902;
     color: #F5EFE6;
@@ -21,7 +21,7 @@ body {
     font-family: 'Cormorant Garamond', serif;
 }
 
-/* ── Sección inicio: texto + imagen en arco ── */
+/* -- Sección inicio: texto + imagen en arco -- */
 #home {
     display: grid;
     grid-template-columns: 0.7fr 1fr;
@@ -135,7 +135,7 @@ body {
     margin-top: 3px;
 }
 
-/* ── Sección hero: galería de tres columnas ── */
+/* -- Sección hero: galería de tres columnas -- */
 #hero {
     text-align: center;
     border-top: 1px solid #F5EFE6;
@@ -236,7 +236,7 @@ body {
 
 
 
-/* ── Responsive: móvil ── */
+/* -- Responsive: móvil -- */
 @media (max-width: 700px) {
 
     html {

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Cormorant+Garamond:wght@300;400&display=swap');
 
-/* ── Reset global ── */
+/* -- Reset global -- */
 *,
 *::before,
 *::after {
@@ -14,7 +14,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ── Base del documento ── */
+/* -- Base del documento -- */
 html,
 body {
     height: 100%;
@@ -34,7 +34,7 @@ main {
     flex: 1;
 }
 
-/* ── Contenido de la página ── */
+/* -- Contenido de la página -- */
 .page {
     max-width: 990px;
     margin: 0 auto;
@@ -63,7 +63,7 @@ main {
     margin-bottom: 2rem;
 }
 
-/* ── Barra de progreso ── */
+/* -- Barra de progreso -- */
 .progress-wrap {
     margin-bottom: 2.5rem;
 }
@@ -89,7 +89,7 @@ main {
     color: rgba(255, 255, 255, 0.699);
 }
 
-/* ── Input para agregar tarea ── */
+/* -- Input para agregar tarea -- */
 .add-row {
     display: flex;
     gap: 8px;
@@ -132,7 +132,7 @@ main {
     color: #fff;
 }
 
-/* ── Lista de tareas ── */
+/* -- Lista de tareas -- */
 .task-list {
     display: flex;
     flex-direction: column;
@@ -204,7 +204,7 @@ main {
     color: rgba(255, 125, 175, 0.719);
 }
 
-/* ── Estado vacío ── */
+/* -- Estado vacío -- */
 .empty {
     padding: 1rem 0;
     text-align: center;
