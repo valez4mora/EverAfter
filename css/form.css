@@ -127,16 +127,6 @@ body {
     margin-top: 1rem;
 }
 
-.form-btn-back {
-    opacity: 0.5;
-    border-color: transparent;
-}
-
-.form-btn-back:hover {
-    opacity: 0.8;
-    background: transparent;
-}
-
 /* -- Step 2: selector de paquete -- */
 .form-error {
     color: #e08a7d;

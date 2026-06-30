@@ -21,7 +21,7 @@
         }
     ],
     "cta": {
-        "label": "Organize your wedding →",
+        "label": "Organize your wedding &#8594;",
         "link": "form.html"
     }
 }

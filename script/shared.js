@@ -55,7 +55,7 @@ function mostrarDetalle(id) {
 
     const contenedorListaExiste = document.getElementById('packages-container') !== null;
     const botonVolver = (esMobile && contenedorListaExiste)
-        ? `<button class="back-to-list" onclick="volverALaLista()">← Back to list</button>`
+        ? `<button class="back-to-list" onclick="volverALaLista()">&#8592; Back to list</button>`
         : '';
 
     detalle.innerHTML = `
