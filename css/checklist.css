@@ -213,19 +213,10 @@ main {
     font-style: italic;
 }
 
-/* ===========================
-   Tablets
-=========================== */
-@media (max-width: 992px) {
-    .page {
-        padding: 6rem 3rem 2.5rem;
-    }
-}
-
-/* ===========================
+/* --
    Celulares
-=========================== */
-@media (max-width: 768px) {
+-- */
+@media (max-width: 700px) {
 
     .page {
         padding: 6.5rem 1.5rem 2rem;
@@ -250,9 +241,9 @@ main {
     }
 }
 
-/* ===========================
+/* --
    Celulares pequeños
-=========================== */
+-- */
 @media (max-width: 480px) {
 
     .page {
